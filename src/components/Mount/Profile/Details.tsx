@@ -1,12 +1,12 @@
-import { createThemeContext } from '@/Context/context'
-import { contactData, details } from '@/data/data'
-
 import { FaGithub, FaLinkedin, FaRegHandshake, FaRunning } from 'react-icons/fa'
 import { MdAttachEmail } from 'react-icons/md'
 import { PiReadCvLogoBold } from 'react-icons/pi'
 import { GrTechnology } from 'react-icons/gr'
 import React, { Suspense } from 'react'
 import { RiReactjsLine } from 'react-icons/ri'
+import { TbCertificate } from 'react-icons/tb'
+import { contactData, details } from '@/data/data'
+import { createThemeContext } from '@/Context/context'
 
 const Live = React.lazy(() => import('@/components/Animated/Live'))
 
@@ -39,7 +39,7 @@ const Details = React.memo(() => {
           className="transition-scale duration-200 ease-in-out flex items-center  gap-1 break-all text-md"
         >
           <MdAttachEmail className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />{' '}
-          <h2>{contactData.email}</h2>
+          <h2 className="text-sm">{contactData.email}</h2>
         </a>
       </div>
       <div className="mx-1">
@@ -62,10 +62,15 @@ const Details = React.memo(() => {
           {details.techstack}
         </section>
         <section className="flex gap-1 items-center">
-          <GrTechnology className="w-4 h-4 hover:scale-115 scale-100 cursor-pointer" />
+          <TbCertificate className="w-4 h-4 hover:scale-115 scale-100 cursor-pointer" />
           <h1>Certification -</h1>
           {details.certification.map((item, i) => (
-            <a href={item.path} target='_blank' key={i} className="relative group">
+            <a
+              href={item.path}
+              target="_blank"
+              key={i}
+              className="relative group"
+            >
               <span>
                 <span
                   className={`absolute pointer-events-none w-15 text-xs bottom-5 -left-5 z-1 p-1 opacity-0 group-hover:opacity-100 rounded-xl text-center ${LightTheme ? 'bg-black text-white' : 'bg-white text-black'}`}

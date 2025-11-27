@@ -1,4 +1,3 @@
-
 import { FaFigma, FaNodeJs, FaPython, FaReact } from 'react-icons/fa'
 import {
   RiNextjsFill,
@@ -34,7 +33,7 @@ export const heroData = {
   about_ln2:
     "currently a college student. I'm a self taught developer usually creating apps or sites using React, Next, TanStack, Supabase and TailwindCSS",
   about_ln3:
-    "I am open to freelance opportunities and contributions. Please reach out if you have a project in mind",
+    'I am open to freelance opportunities and contributions. Please reach out if you have a project in mind',
 }
 
 export const contactData = {
@@ -134,77 +133,89 @@ export const skillsData = {
     { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> },
   ],
 }
-
+export const OngoingProjects = [
+  {
+    title: 'Mogger AI ',
+    Link: 'Mogger_AI',
+    started: '20th Nov 2025',
+    // required
+    contributers: [
+      {
+        label: 'aditya',
+        profileUrl: '/Images_Optimized/Profile/logo_new.png',
+        link: 'https://github.com/aditya-wuw',
+      },
+    ],
+    description:
+      'AI-powered web app that generates personalized mock tests,notes and schedules to help students prepare effectively for exams and studying.send a prompt and see the magic as it creates a virtual mock test simulation for you.',
+    additional_dec:
+      'This is my fullstack personal project and a MVP will be released soon',
+    image: assets.screenshot2,
+    tags: ['NEXT', 'Tailwind', <SiSupabase className="h-4 w-4" />, 'Solo'],
+    links: [
+      {
+        label: 'View Demo',
+        url: 'https://mogger-mog-your-exams.vercel.app/',
+      },
+    ],
+  },
+  {
+    title: 'ERPSystem',
+    started: '1st Oct 2025',
+    // required
+    contributers: [
+      {
+        label: 'AbIsheKVaIdyA',
+        profileUrl: 'https://avatars.githubusercontent.com/u/87827954?v=4',
+        link: 'https://github.com/AbIsheKVaIdyA',
+      },
+      {
+        label: 'aditya',
+        profileUrl: '/Images_Optimized/Profile/logo_new.png',
+        link: contactData.gh,
+      },
+    ],
+    description: (
+      <span>
+        It's{' '}
+        <a
+          href="https://github.com/AbIsheKVaIdyA"
+          className="text-blue-500"
+          target="_blank"
+        >
+          @ AbisheK Vaidya's
+        </a>{' '}
+        modern, full-stack College Management System Project, built with Next.js
+        14, TypeScript, Tailwind CSS, and Supabase. I'm contributing as a
+        Backend Intigration engineer
+      </span>
+    ),
+    additional_dec: 'Project is under development',
+    image: null,
+    tags: [
+      'NEXT',
+      'Tailwind',
+      <SiSupabase className="h-4 w-4" />,
+      'Contributer',
+    ],
+    links: [
+      {
+        label: 'none',
+        url: 'none',
+      },
+    ],
+  },
+]
 export const projectsData = {
   title: 'Projects',
   items: [
-    {
-      title: 'Mogger AI',
-      Link: 'Mogger_AI',
-      description:
-        'AI-powered web app that generates personalized mock tests to help students prepare effectively for exams.',
-      additional_dec:
-        'send a prompt and see the magic as it creates a virtual mock test simulation for you',
-      dedicated_dec: (
-        <p>
-          <b className="text-lg">Mogger AI</b> is an AI-powered web application
-          designed to help students prepare effectively for exams by generating
-          personalized mock tests. What started as a simple curiosity project
-          turned into a real-world solution that adapts questions to user needs,
-          making preparation more dynamic and engaging.
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2  flex gap-2 items-center">
-              <PiProjectorScreenFill />
-              Project idea
-            </h1>
-            <p className="text-lg">
-              I use GPT to test and generate random questions very often but, it
-              became really redundant and not really efficient for me and my
-              studies. so I got the idea from my own problem where I wanted a
-              virtual mock test environment that generates questions based on my
-              given instructions, that's how I got the idea of Mogger.AI
-            </p>
-          </section>
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <SiPaloaltonetworks />
-              How it works
-            </h1>
-            <p className="text-lg">
-              It takes a user input as a Prompt and generates a set of questions
-              for practice or testing learnings. Users can send PDF's of their
-              personalized notes to create questions based on their written
-              notes. In this way they will be able to test their skills and
-              memorize faster and better with the help of AI, and GPT's we can
-              create questions with unique seeds so that questions can be unique
-            </p>
-            <p className="text-md italic">
-              (currently it's a very basic version so the questions may be
-              repeating or too easy)
-            </p>
-          </section>
-        </p>
-      ),
-      image: assets.screenshot2,
-      tags: ['NEXT', 'Tailwind', <SiSupabase className="h-4 w-4" />, 'Live'],
-      links: [
-        {
-          label: 'View',
-          url: 'https://mogger-mog-your-exams.vercel.app/',
-        },
-        {
-          label: <GrGithub className="w-6 h-6" />,
-          url: 'https://github.com/aditya-wuw/Mogger-Mog-your-exams',
-        },
-      ],
-    },
     {
       title: 'FireShip Discord bot',
       Link: 'FireShip_Discord_bot',
       description:
         'FireShip bot is a Discord bot designed to keep users up to date with the latest videos',
       additional_dec:
-        "Fire ship is the goat and no one can deny that. So, I made this bot to get up to date with the channel as I'm busy gaming with my discord kittens ",
+        'Fire ship is the goat and no one can deny that. So, I made this bot to get up to date with the channel',
       dedicated_dec: (
         <p>
           <b className="text-lg">FireShipBot</b> is an automation tool built to
@@ -305,55 +316,6 @@ export const projectsData = {
         {
           label: <GrGithub className="w-6 h-6" />,
           url: 'https://github.com/aditya-wuw/HMS-Dashbord',
-        },
-      ],
-    },
-    {
-      title: 'Themed Portfolio',
-      Link: 'Portfolio',
-      description:
-        'As persona series is one of my most favorite games of all time. So, I made this portfolio website themed on persona 3 reload',
-      additional_dec: 'when passion meets profession absolute chinema !',
-      dedicated_dec: (
-        <p>
-          <b className="text-lg">Persona Portfolio</b> is a creative,
-          persona-themed personal website built to showcase projects, skills,
-          and experiences in a fun and unique narrative style. Instead of a
-          traditional resume, it feels like exploring a digital story.
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <PiProjectorScreenFill />
-              Project idea
-            </h1>
-            <p className="text-lg">
-              Traditional portfolios often look too formal and repetitive, so I
-              decided to build one that feels alive and matches my personality.
-              The idea was to use “persona cards” and themed sections to tell a
-              story rather than just listing skills and projects.
-            </p>
-          </section>
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <SiPaloaltonetworks />
-              How it works
-            </h1>
-            <p className="text-lg">
-              The portfolio uses a React-based frontend styled with Tailwind.
-              Each section (About, Projects, Skills, Contact) is presented as
-              part of a themed persona experience with interactive animations.
-              Visitors feel like they`re exploring a character profile while
-              discovering my work and achievements.
-            </p>
-          </section>
-        </p>
-      ),
-      image: assets.screenshot1,
-      tags: ['React', 'UI', 'Portfolio', 'Live'],
-      links: [
-        { label: 'View', url: 'https://portfolio-aditya-mandal.onrender.com/' },
-        {
-          label: <GrGithub className="w-6 h-6" />,
-          url: 'https://github.com/aditya-wuw/Portfolio-Aditya-Mandal',
         },
       ],
     },

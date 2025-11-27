@@ -1,15 +1,16 @@
-import { createThemeContext } from '@/Context/context'
 import { motion, useInView } from 'motion/react'
 import React, { useEffect, useRef } from 'react'
-import video from "/Video_bg/Persona -3-Reload Menu-bg.mp4"
+import { createThemeContext } from '@/Context/context'
+import video from '/Video_bg/Persona -3-Reload Menu-bg.mp4'
+
 const Cover = React.memo(() => {
   const { LightTheme, setisinView } = createThemeContext()
   const AMinView = useRef<HTMLAnchorElement | null>(null)
   const videoref = useRef<HTMLVideoElement>(null)
   const isInView = useInView(AMinView)
   useEffect(() => {
-      setisinView(isInView)
-  }, [isInView,videoref])
+    setisinView(isInView)
+  }, [isInView, videoref])
   return (
     <motion.a
       href="https://www.youtube.com/watch?v=60wWZH49MzE"

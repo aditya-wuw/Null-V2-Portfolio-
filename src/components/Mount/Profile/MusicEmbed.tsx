@@ -1,13 +1,13 @@
-import { createThemeContext } from '@/Context/context'
 import React, { useEffect, useState } from 'react'
 import { FaBackward, FaForward, FaPause, FaPlay } from 'react-icons/fa'
 import { FaCompactDisc } from 'react-icons/fa6'
 import { animate, motion, useMotionValue } from 'motion/react'
 import { HiMiniSpeakerWave } from 'react-icons/hi2'
 import { PiSpeakerXFill } from 'react-icons/pi'
-import MusicData from '@/data/music.json'
 import { TiArrowLoop } from 'react-icons/ti'
 import { RiPlayListFill } from 'react-icons/ri'
+import MusicData from '@/data/music.json'
+import { createThemeContext } from '@/Context/context'
 
 const MusicEmbed = React.memo(() => {
   // do somthing later
@@ -43,8 +43,8 @@ const MusicEmbed = React.memo(() => {
     }
   }, [])
   useEffect(() => {
-  setisBGLoadedHUH(false)
-}, [last])
+    setisBGLoadedHUH(false)
+  }, [last])
 
   useEffect(() => {
     const audio = Music_ref.current
@@ -113,7 +113,8 @@ const MusicEmbed = React.memo(() => {
           localStorage.setItem('prev_vol', String(volume_Value) || '')
           setVolumeValue(0)
         } else {
-          let prev_vol: number = Number(localStorage.getItem('prev_vol')) || 0.5
+          const prev_vol: number =
+            Number(localStorage.getItem('prev_vol')) || 0.5
           setVolumeValue(prev_vol)
         }
       }
@@ -159,7 +160,7 @@ const MusicEmbed = React.memo(() => {
     background: `linear-gradient(to right, lightblue ${Timeline && Timeline + 1}%,#C9C9C9 1%)`,
   }
 
-  const player_control_style: string =
+  const player_control_style =
     'cursor-pointer hover:scale-130 scale-140 transiton duration-200 ease-in-out '
 
   return (
@@ -168,14 +169,18 @@ const MusicEmbed = React.memo(() => {
     >
       <div className="w-full h-full p-2 overflow-hidden relative rounded-2xl">
         <motion.img
-          onLoad={()=>{setTimeout(()=>{setisBGLoadedHUH(true)},30);}}
+          onLoad={() => {
+            setTimeout(() => {
+              setisBGLoadedHUH(true)
+            }, 30)
+          }}
           src={MusicData[last].banner}
           alt="bg-media-player"
           draggable="false"
           className={`bg_cover object-cover select-none absolute 2xl:-top-15 top-0 right-0 mask-r-from-50% z-1 mask-l-from-70%`}
           key={last}
           initial={{ opacity: 0 }}
-          animate={{ opacity: isBGLoadedHUH ? 1 : 0}}
+          animate={{ opacity: isBGLoadedHUH ? 1 : 0 }}
           transition={{ duration: 0.2, ease: 'easeInOut' }}
         />
         <motion.div
@@ -217,7 +222,7 @@ const MusicEmbed = React.memo(() => {
                   className="whitespace-nowrap xl:text-lg text-md -translate-x-5"
                   key={MusicData[last].Title}
                   initial={{ x: 50 }}
-                  animate={{ x:-50}}
+                  animate={{ x: -50 }}
                   transition={{
                     duration: 10,
                     ease: 'easeOut',
@@ -275,7 +280,9 @@ const MusicEmbed = React.memo(() => {
                 style={seek_bar}
               />
             </div>
-            <ul className={`flex gap-6 text-white items-center w-fit max-md:scale-90`}>
+            <ul
+              className={`flex gap-6 text-white items-center w-fit max-md:scale-90`}
+            >
               <li
                 className={`${player_control_style}`}
                 onClick={() => MusicPlayer.handle_next('back')}

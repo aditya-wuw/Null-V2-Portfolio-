@@ -1,10 +1,10 @@
-import { createThemeContext } from '@/Context/context'
-import { projectsData } from '@/data/data'
 import { MdGridView } from 'react-icons/md'
 import { FaList } from 'react-icons/fa6'
-import { useNavigate } from '@tanstack/react-router'
+import { Link, useNavigate } from '@tanstack/react-router'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
+import { createThemeContext } from '@/Context/context'
+import { projectsData } from '@/data/data'
 
 const Projects = React.memo(() => {
   const { LightTheme } = createThemeContext()
@@ -46,7 +46,7 @@ const Projects = React.memo(() => {
       >
         <div>
           <div className="flex justify-between w-full mx-1 px-2">
-            <h1 />
+            <h1 className="font-bold text-xl">Projects</h1>
             <button
               className={`${disabled && 'hidden'} scale-115 cursor-pointer hover:scale-120 transition-scale duration-200 ease-in-out`}
               onClick={handleClick}
@@ -68,7 +68,7 @@ const Projects = React.memo(() => {
               }}
               transition={{ duration: duration, ease: 'easeInOut' }}
             >
-              <div className="Image_comp h-[30%]">
+              <div className="Image_comp h-[40%]">
                 <a
                   href={
                     item.links[0]?.url !== 'none'
@@ -104,27 +104,28 @@ const Projects = React.memo(() => {
                 )}
               </div>
               <div className="px-3 mt-4 flex gap-2 items-center justify-between mr-1 absolute w-full bottom-3 z-10">
-                <div className="flex gap-2">
-                  {item.links[0]?.url !== 'none' && (
-                    <a href={item.links[0]?.url} target="_blank">
-                      <button
-                        className={`p-[5px] text-xs rounded-md cursor-pointer ${LightTheme ? 'bg-blue-300' : 'bg-blue-500'}`}
-                      >
-                        {item.links[0]?.label}
-                      </button>
-                    </a>
+                <div className="flex gap-2 items-center">
+                  {item.links.map(
+                    (l, lindex) =>
+                      l.label !== 'none' && (
+                        <Link
+                          key={lindex}
+                          to={l.url}
+                          target="_blank"
+                          className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-sm'}`}
+                        >
+                          {l.label}
+                        </Link>
+                      ),
                   )}
-                  <a href={item.links[1]?.url} target="_blank">
-                    {item.links[1]?.label}
-                  </a>
                 </div>
                 <div className="flex gap-2 text-xs items-center">
-                  {item.tags.map((i, index) => (
+                  {item.tags.map((p, index) => (
                     <div
                       key={index}
                       className={`p-1 rounded-md ${LightTheme ? 'bg-blue-400' : 'bg-blue-700'}`}
                     >
-                      {i}
+                      {p}
                     </div>
                   ))}
                 </div>

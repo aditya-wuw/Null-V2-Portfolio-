@@ -1,4 +1,3 @@
-import { type AnimationPlaybackControls } from 'motion/react'
 import React, {
   createContext,
   useCallback,
@@ -7,7 +6,9 @@ import React, {
   useRef,
   useState,
 } from 'react'
+import type { AnimationPlaybackControls } from 'motion/react'
 import MusicData from '@/data/music.json'
+
 const Context_Provider = createContext<null | any>(null)
 
 export const Context_Provider_wrap = React.memo(
@@ -20,7 +21,7 @@ export const Context_Provider_wrap = React.memo(
     const [ShowPlaylist, setShowPlaylist] = useState(false)
     const [last, setlast] = useState(0)
     const [Track_rec, settrack] = useState(MusicData)
-    
+
     const MusicPlayer = {
       handlePlaying: () => {
         try {
@@ -36,6 +37,7 @@ export const Context_Provider_wrap = React.memo(
             Rotate_control_ref.current?.play()
             setplaying(true)
             audio.play().catch((e: Error) => console.warn(e))
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           } else if (isplaying) {
             audio.pause()
             Rotate_control_ref.current?.pause()
@@ -54,7 +56,7 @@ export const Context_Provider_wrap = React.memo(
           } else if (action === 'back') {
             newIndex = last === 0 ? MusicData.length - 1 : last - 1
           } else if (action === 'play') {
-            newIndex = target;
+            newIndex = target
           }
           Music_ref.current.pause()
           Music_ref.current.src = ''
@@ -62,11 +64,12 @@ export const Context_Provider_wrap = React.memo(
           Music_ref.current.src = MusicData[newIndex].music_src
 
           if (isplaying) {
-             settrack((prev) =>
-            prev.map((track, i) => ({
-              ...track,
-              isplaying: i === newIndex,
-            })));
+            settrack((prev) =>
+              prev.map((track, i) => ({
+                ...track,
+                isplaying: i === newIndex,
+              })),
+            )
             Music_ref.current
               .play()
               .catch((e: Error) => console.warn('playback error:', e))

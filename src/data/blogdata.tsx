@@ -1,12 +1,14 @@
 import { assets } from '../Assets/assets'
 
-const x = <a
-            href="https://x.com/GenzaGenza"
-            target="_blank"
-            className="ml-1 text-green-400"
-          >
-            @GenzaGenza
-          </a>
+const x = (
+  <a
+    href="https://x.com/GenzaGenza"
+    target="_blank"
+    className="ml-1 text-green-400"
+  >
+    @GenzaGenza
+  </a>
+)
 
 export const Notes_blog = [
   {
