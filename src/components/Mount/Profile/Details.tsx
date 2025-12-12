@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaRegHandshake, FaRunning } from 'react-icons/fa'
 import { MdAttachEmail } from 'react-icons/md'
-import { PiReadCvLogoBold } from 'react-icons/pi'
+// import { PiReadCvLogoBold } from 'react-icons/pi'
 import { GrTechnology } from 'react-icons/gr'
 import React, { Suspense } from 'react'
 import { RiReactjsLine } from 'react-icons/ri'
@@ -24,14 +24,14 @@ const Details = React.memo(() => {
         <a href={contactData.linkedIN} target="_blank">
           <FaLinkedin className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />
         </a>
-        <a
+        {/* <a
           href={contactData.CV}
           target="_blank"
           className="flex items-center font-bold hover:scale-115 scale-100 transition-scale duration-300 ease-in-out animate-bounce"
         >
           <PiReadCvLogoBold className="w-5 h-5 cursor-pointer " />
           <h1>CV</h1>
-        </a>
+        </a> */}
       </section>
       <div className="text-[15px] m-1">
         <a

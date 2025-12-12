@@ -12,11 +12,13 @@ import {
   SiRadixui,
   SiReacthookform,
   SiSupabase,
+  SiTauri,
   SiTypescript,
   SiZod,
 } from 'react-icons/si'
 import { PiFileSql, PiProjectorScreenFill } from 'react-icons/pi'
 import { GrGithub } from 'react-icons/gr'
+import { DiLinux } from 'react-icons/di'
 import { assets } from '../Assets/assets'
 
 export const navLinks = [
@@ -43,7 +45,7 @@ export const contactData = {
   email: 'nullfaceddevbusiness@gmail.com',
   gh: 'https://github.com/aditya-wuw',
   linkedIN: 'https://www.linkedin.com/in/aditya-mandal-a30347294',
-  CV: assets.CV,
+  // CV: assets.CV,
 }
 
 export const details = {
@@ -130,10 +132,44 @@ export const skillsData = {
       Comp: <SiAdobephotoshop className={icon_size} />,
       color: 'group-hover:text-blue-800',
     },
+    {
+      Name: 'Linux',
+      Comp: <DiLinux className={icon_size} />,
+      color: 'group-hover:text-orange-800',
+    },{
+      Name: 'Tauri',
+      Comp: <SiTauri className={icon_size} />,
+      color: 'group-hover:text-yellow-800',
+    },
     { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> },
   ],
 }
 export const OngoingProjects = [
+  {
+    title: 'Copy History (Linux)',
+    Link: 'Copy_History',
+    started: '1st Dec 2025',
+    // required
+    contributers: [
+      {
+        label: 'aditya',
+        profileUrl: '/Images_Optimized/Profile/logo_new.png',
+        link: 'https://github.com/aditya-wuw',
+      },
+    ],
+    description:
+      'a quick tool I made to substitube my need for a windows like clipbord management service',
+    additional_dec:
+      'This is my fullstack personal project and a MVP will be released soon',
+    image: null,
+    tags: ['React', 'Rust', 'Tauri', 'Tailwind', 'Solo'],
+    links: [
+      {
+        label: 'View Repo',
+        url: 'https://github.com/aditya-wuw/CopyHistoryLinux',
+      },
+    ],
+  },
   {
     title: 'Mogger AI ',
     Link: 'Mogger_AI',
@@ -156,52 +192,6 @@ export const OngoingProjects = [
       {
         label: 'View Demo',
         url: 'https://mogger-mog-your-exams.vercel.app/',
-      },
-    ],
-  },
-  {
-    title: 'ERPSystem',
-    started: '1st Oct 2025',
-    // required
-    contributers: [
-      {
-        label: 'AbIsheKVaIdyA',
-        profileUrl: 'https://avatars.githubusercontent.com/u/87827954?v=4',
-        link: 'https://github.com/AbIsheKVaIdyA',
-      },
-      {
-        label: 'aditya',
-        profileUrl: '/Images_Optimized/Profile/logo_new.png',
-        link: contactData.gh,
-      },
-    ],
-    description: (
-      <span>
-        It's{' '}
-        <a
-          href="https://github.com/AbIsheKVaIdyA"
-          className="text-blue-500"
-          target="_blank"
-        >
-          @ AbisheK Vaidya's
-        </a>{' '}
-        modern, full-stack College Management System Project, built with Next.js
-        14, TypeScript, Tailwind CSS, and Supabase. I'm contributing as a
-        Backend Intigration engineer
-      </span>
-    ),
-    additional_dec: 'Project is under development',
-    image: null,
-    tags: [
-      'NEXT',
-      'Tailwind',
-      <SiSupabase className="h-4 w-4" />,
-      'Contributer',
-    ],
-    links: [
-      {
-        label: 'none',
-        url: 'none',
       },
     ],
   },
