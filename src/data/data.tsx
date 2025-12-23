@@ -1,4 +1,4 @@
-import { FaFigma, FaNodeJs, FaPython, FaReact } from 'react-icons/fa'
+import { FaFigma, FaNodeJs, FaPython, FaReact, FaRust } from 'react-icons/fa'
 import {
   RiNextjsFill,
   RiReactjsFill,
@@ -136,19 +136,22 @@ export const skillsData = {
       Name: 'Linux',
       Comp: <DiLinux className={icon_size} />,
       color: 'group-hover:text-orange-800',
-    },{
+    },
+    { Name: 'Rust', Comp: <FaRust className={icon_size} /> ,color: 'group-hover:text-orange-500' },
+    {
       Name: 'Tauri',
       Comp: <SiTauri className={icon_size} />,
       color: 'group-hover:text-yellow-800',
     },
-    { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> },
+    { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> }
   ],
 }
 export const OngoingProjects = [
   {
-    title: 'Copy History (Linux)',
+    title: 'Copy Chan',
     Link: 'Copy_History',
-    started: '1st Dec 2025',
+    started: '1st Dec',
+    ended: '23th Dec 2025',
     // required
     contributers: [
       {
@@ -158,9 +161,8 @@ export const OngoingProjects = [
       },
     ],
     description:
-      'a quick tool I made to substitube my need for a windows like clipbord management service',
-    additional_dec:
-      'This is my fullstack personal project and a MVP will be released soon',
+      'Copy Chan is a cross-platform desktop clipboard/history manager with a Emoji and symbols picker, built with Tauri (Rust) and React + Vite. Primarily made and optimized for linux.',
+    additional_dec: null,
     image: null,
     tags: ['React', 'Rust', 'Tauri', 'Tailwind', 'Solo'],
     links: [

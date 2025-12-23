@@ -10,7 +10,7 @@ export default function Projects_desc() {
     <header
       className={`select-none p-3 mt-5 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30 rounded-xl' : 'bg-black text-white border border-white/30 rounded-xl'} bottom-3 relative`}
     >
-      <h1 className="text-xl font-bold">MVPs & Contributions</h1>
+      <h1 className="text-md font-bold">MVPs & Contributions</h1>
       <div className="mt-2 flex flex-col gap-5">
         {OngoingProjects.map((OP, index) => (
           <div key={index} className="relative">
@@ -24,11 +24,11 @@ export default function Projects_desc() {
                 />
               </div>
             )}
-            <div className="font-bold text-2xl mt-3">{OP.title}</div>
+            <div className="font-bold text-xl mt-3">{OP.title}</div>
             <div className="py-2 flex justify-between items-center">
               <div className="flex items-center md:text-md text-sm gap-2">
                 <RxTimer size={20} />
-                {OP.started} - Ongoing
+                {OP.started} - {OP.ended ? OP.ended : "Ongoing"}
               </div>
               <div className="flex items-center gap-2 font-bold md:text-md text-sm">
                 {OP.contributers.map(
