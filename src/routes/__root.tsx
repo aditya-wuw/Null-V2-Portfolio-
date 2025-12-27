@@ -1,6 +1,5 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
-import Nav from '@/components/Nav'
 import { createThemeContext } from '@/Context/context'
 import Loader from '@/components/Loader'
 
@@ -29,9 +28,8 @@ function layOuts() {
       <div
         className={`min-[4240px]:mx-115 min-[3840px]:mx-15 min-[1280px]:mx-30 mx-4 flex justify-center h-full  max-xl:h-full max-lg:h-[170%]`}
       >
-        <div className="2xl:w-[50vw] max-[1024px]:w-[99vw] shrinked relative h-full">
-          <Nav />
-          <section className="mt-10">
+        <div className="2xl:w-[50vw] max-[1024px]:w-[99vw] h-full">
+          <section>
             <Outlet />
           </section>
         </div>

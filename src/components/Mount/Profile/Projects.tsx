@@ -39,11 +39,9 @@ const Projects = React.memo(() => {
 
   return (
     <div
-      className={`p-px select-none  ${LightTheme ? 'bg-linear-to-l from-neutral-500 text-black  rounded-xl ' : 'bg-linear-to-r from-neutral-500 text-white  rounded-xl'}`}
+      className={`select-none  ${LightTheme ? 'bg-linear-to-l from-neutral-500 text-black ' : 'bg-linear-to-r from-neutral-500 text-white'}`}
     >
-      <div
-        className={`p-3 rounded-xl ${LightTheme ? 'bg-white' : 'bg-black text-white  rounded-xl'}`}
-      >
+      <div className={`p-3 ${LightTheme ? 'bg-white' : 'bg-black text-white'}`}>
         <div>
           <div className="flex justify-between w-full mx-1 px-2">
             <h1 className="font-bold text-xl">Projects</h1>
@@ -87,12 +85,12 @@ const Projects = React.memo(() => {
                 </a>
               </div>
               <div
-                className="p-3 select-none cursor-pointer  "
+                className="p-3 select-none cursor-pointer "
                 onClick={() => Navigate(item.Link)}
                 title={'view details ' + item.title}
               >
                 <h1 className="text-xl font-bold">{item.title}</h1>
-                <h1 className="lg:text-sm text-xs">{item.description}</h1>
+                <h1 className="md:text-sm text-[10px]">{item.description}</h1>
                 {!islist && !disabled && (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -103,7 +101,7 @@ const Projects = React.memo(() => {
                   </motion.div>
                 )}
               </div>
-              <div className="px-3 mt-4 flex gap-2 items-center justify-between mr-1 absolute w-full bottom-3 z-10">
+              <div className="px-3 mt-3 flex gap-2 items-center justify-between mr-1 absolute w-full bottom-3 z-10">
                 <div className="flex gap-2 items-center">
                   {item.links.map(
                     (l, lindex) =>
@@ -112,7 +110,7 @@ const Projects = React.memo(() => {
                           key={lindex}
                           to={l.url}
                           target="_blank"
-                          className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-sm'}`}
+                          className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-xs md:text-sm text-white'}`}
                         >
                           {l.label}
                         </Link>
@@ -123,7 +121,7 @@ const Projects = React.memo(() => {
                   {item.tags.map((p, index) => (
                     <div
                       key={index}
-                      className={`p-1 rounded-md ${LightTheme ? 'bg-blue-400' : 'bg-blue-700'}`}
+                      className={`p-1 rounded-md text-white bg-blue-700`}
                     >
                       {p}
                     </div>

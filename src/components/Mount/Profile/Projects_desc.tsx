@@ -8,7 +8,8 @@ export default function Projects_desc() {
 
   return (
     <header
-      className={`select-none p-3 mt-5 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30 rounded-xl' : 'bg-black text-white border border-white/30 rounded-xl'} bottom-3 relative`}
+      id="Projects"
+      className={`select-none mt-2 p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
       <h1 className="text-md font-bold">MVPs & Contributions</h1>
       <div className="mt-2 flex flex-col gap-5">
@@ -28,7 +29,7 @@ export default function Projects_desc() {
             <div className="py-2 flex justify-between items-center">
               <div className="flex items-center md:text-md text-sm gap-2">
                 <RxTimer size={20} />
-                {OP.started} - {OP.ended ? OP.ended : "Ongoing"}
+                {OP.started} - {OP.ended ? OP.ended : 'Ongoing'}
               </div>
               <div className="flex items-center gap-2 font-bold md:text-md text-sm">
                 {OP.contributers.map(
@@ -48,7 +49,7 @@ export default function Projects_desc() {
                 )}
               </div>
             </div>
-            <div className="text-md mb-3">
+            <div className="mb-2 leading-normal md:text-sm text-[12px]">
               <div>{OP.description}</div>
               <div>{OP.additional_dec}</div>
             </div>
@@ -61,18 +62,18 @@ export default function Projects_desc() {
                         key={lindex}
                         to={l.url}
                         target="_blank"
-                        className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md'}`}
+                        className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-white'}`}
                       >
                         {l.label}
                       </Link>
                     ),
                 )}
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 ">
                 {OP.tags.map((tag, tagindex) => (
                   <div
                     key={tagindex}
-                    className="bg-blue-600 px-2 py-1 rounded-md"
+                    className="bg-blue-600 px-2 py-1 rounded-md text-white"
                   >
                     {tag}
                   </div>

@@ -14,7 +14,7 @@ const Details = React.memo(() => {
   const { LightTheme } = createThemeContext()
   return (
     <div
-      className={`select-none h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30 rounded-xl' : 'bg-black text-white border border-white/30 rounded-xl'} bottom-3 relative`}
+      className={`select-none h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
       <h1 className="text-xl font-bold mb-5">Details</h1>
       <section className="flex justify-center gap-2">
@@ -52,10 +52,12 @@ const Details = React.memo(() => {
             </Suspense>
           </div>
         </section>
-        <section className="flex gap-1 items-center">
-          <FaRegHandshake className="w-4 h-4 hover:scale-115 scale-100 cursor-pointer" />
-          <h1>Employment -{details.employment}</h1>
-        </section>
+        {details.employment.length > 0 && (
+          <section className="flex gap-1 items-center">
+            <FaRegHandshake className="w-4 h-4 hover:scale-115 scale-100 cursor-pointer" />
+            <h1>Employment -{details.employment}</h1>
+          </section>
+        )}
         <section className="flex gap-1 items-center">
           <GrTechnology className="w-4 h-4 hover:scale-115 scale-100 cursor-pointer" />
           <h1>Tech Stack -</h1>

@@ -28,7 +28,7 @@ const Cover = React.memo(() => {
         </h1>
         <video
           src={video}
-          className={` absolute lg:-top-23 transition-opacity ease-in-out duration-200`}
+          className={` absolute lg:-top-23 transition-opacity ease-in-out duration-200 `}
           width={2250}
           height={1200}
           muted

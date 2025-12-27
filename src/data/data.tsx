@@ -18,7 +18,7 @@ import {
 } from 'react-icons/si'
 import { PiFileSql, PiProjectorScreenFill } from 'react-icons/pi'
 import { GrGithub } from 'react-icons/gr'
-import { DiLinux } from 'react-icons/di'
+import { DiLinux, DiReact } from 'react-icons/di'
 import { assets } from '../Assets/assets'
 
 export const navLinks = [
@@ -49,7 +49,7 @@ export const contactData = {
 }
 
 export const details = {
-  employment: 'Freelancer',
+  employment: '',
 
   certification: [
     {
@@ -66,7 +66,7 @@ export const details = {
   ),
 }
 
-const icon_size = 'w-7 h-7'
+const icon_size = 'w-5 h-5 md:w-7 md:h-7'
 export const skillsData = {
   title: 'Skills',
   items: [
@@ -137,13 +137,17 @@ export const skillsData = {
       Comp: <DiLinux className={icon_size} />,
       color: 'group-hover:text-orange-800',
     },
-    { Name: 'Rust', Comp: <FaRust className={icon_size} /> ,color: 'group-hover:text-orange-500' },
+    {
+      Name: 'Rust',
+      Comp: <FaRust className={icon_size} />,
+      color: 'group-hover:text-orange-500',
+    },
     {
       Name: 'Tauri',
       Comp: <SiTauri className={icon_size} />,
       color: 'group-hover:text-yellow-800',
     },
-    { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> }
+    { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> },
   ],
 }
 export const OngoingProjects = [
@@ -161,21 +165,27 @@ export const OngoingProjects = [
       },
     ],
     description:
-      'Copy Chan is a cross-platform desktop clipboard/history manager with a Emoji and symbols picker, built with Tauri (Rust) and React + Vite. Primarily made and optimized for linux.',
+      'I needed a windows like Clipboard manager as I switched to Linux so I made my own Clipboard Manager, Copy Chan is a cross-platform desktop clipboard/history manager with a Emoji and symbols picker, built with Tauri (Rust) and React + Vite. Primarily made and optimized for linux.',
     additional_dec: null,
     image: null,
-    tags: ['React', 'Rust', 'Tauri', 'Tailwind', 'Solo'],
+    tags: [
+      <DiReact size={18} />,
+      <FaRust size={18} />,
+      <SiTauri size={18} />,
+      <RiTailwindCssFill size={18} />,
+      'solo',
+    ],
     links: [
       {
-        label: 'View Repo',
+        label: 'Repo',
         url: 'https://github.com/aditya-wuw/CopyHistoryLinux',
       },
     ],
   },
   {
-    title: 'Mogger AI ',
+    title: 'Koneko AI',
     Link: 'Mogger_AI',
-    started: '20th Nov 2025',
+    started: '20th dec 2025',
     // required
     contributers: [
       {
@@ -189,7 +199,12 @@ export const OngoingProjects = [
     additional_dec:
       'This is my fullstack personal project and a MVP will be released soon',
     image: assets.screenshot2,
-    tags: ['NEXT', 'Tailwind', <SiSupabase className="h-4 w-4" />, 'Solo'],
+    tags: [
+      'NEXT',
+      <RiTailwindCssFill size={18} />,
+      <SiSupabase className="h-4 w-4" />,
+      'Solo',
+    ],
     links: [
       {
         label: 'View Demo',
@@ -243,7 +258,7 @@ export const projectsData = {
         </p>
       ),
       image: assets.Fireship,
-      tags: ['Node', 'Express', 'YTV3'],
+      tags: [<FaNodeJs size={18} />, 'Express', 'YTV3'],
       links: [
         {
           label: 'none',
@@ -299,7 +314,7 @@ export const projectsData = {
         </p>
       ),
       image: assets.screenshot5,
-      tags: ['React', 'Express', 'Live', 'MongoDB'],
+      tags: [<RiReactjsFill size={18} />, 'Express', 'MongoDB'],
       links: [
         {
           label: 'View',

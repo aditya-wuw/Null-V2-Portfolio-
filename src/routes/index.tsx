@@ -10,6 +10,7 @@ import MusicEmbed from '@/components/Mount/Profile/MusicEmbed'
 import CallingCard from '@/components/Animated/CallingCard'
 import { TextContent } from '@/data/data'
 import Projects_desc from '@/components/Mount/Profile/Projects_desc'
+import Nav from '@/components/Nav'
 
 const Cover = React.lazy(() => import('@/components/Mount/Profile/Cover'))
 const Projects = React.lazy(() => import('@/components/Mount/Profile/Projects'))
@@ -27,13 +28,14 @@ export const Route = createFileRoute('/')({
 function App() {
   const { LightTheme } = createThemeContext()
   return (
-    <div>
-      <div
-        className={`flex flex-col gap-2 wrap-break-word h-screen rounded-2xl`}
-      >
+    <div id="About" className="relative">
+      <div className={`flex flex-col gap-2 wrap-break-word`}>
         <section>
+          <div className='h-full absolute w-full'>
+            <Nav />
+          </div>
           <div
-            className={`w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden rounded-2xl relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
+            className={`mt-17 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
           >
             <Suspense
               fallback={
@@ -48,7 +50,7 @@ function App() {
             </Suspense>
           </div>
         </section>
-        <section className="mt-5 flex max-lg:flex-col gap-3">
+        <section className="relative z-20 flex max-lg:flex-col gap-1 mt-3">
           <div className="lg:w-[70%]">
             <Header />
           </div>
@@ -57,7 +59,7 @@ function App() {
           </div>
         </section>
         <section>
-          <div className="flex md:flex-row flex-col gap-2">
+          <div className="flex md:flex-row flex-col gap-3">
             <div className="md:w-[40%] 2xl:h-34">
               <Skills />
             </div>
@@ -73,8 +75,8 @@ function App() {
         </section>
         <section>
           <Suspense>
-            <Projects />
             <Projects_desc />
+            <Projects />
           </Suspense>
         </section>
         <motion.section
