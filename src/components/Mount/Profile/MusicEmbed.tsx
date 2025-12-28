@@ -10,8 +10,6 @@ import MusicData from '@/data/music.json'
 import { createThemeContext } from '@/Context/context'
 
 const MusicEmbed = React.memo(() => {
-  // do somthing later
-  // want to import a data object of the full play list where I'll want to store the background and sound track
   const {
     Music_ref,
     Rotate_control_ref,
@@ -157,7 +155,7 @@ const MusicEmbed = React.memo(() => {
     background: `linear-gradient(to right, white ${volume_Value}%,#C9C9C9 10%)`,
   }
   const seek_bar: React.CSSProperties = {
-    background: `linear-gradient(to right, lightblue ${Timeline && Timeline + 1}%,#C9C9C9 1%)`,
+    background: `linear-gradient(to right, skyblue ${Timeline && Timeline + 1}%,#C9C9C9 5%)`,
   }
 
   const player_control_style =
@@ -219,7 +217,7 @@ const MusicEmbed = React.memo(() => {
             <div className="text-end text-white backdrop-blur-xs rounded-2xl xl:w-53 w-47">
               <motion.div className="w-52 overflow-hidden">
                 <motion.h2
-                  className="whitespace-nowrap xl:text-lg text-md -translate-x-5"
+                  className="whitespace-nowrap xl:text-lg text-md -translate-x-5 font-medium"
                   key={MusicData[last].Title}
                   initial={{ x: 50 }}
                   animate={{ x: -50 }}
@@ -276,7 +274,7 @@ const MusicEmbed = React.memo(() => {
                 onInput={() => setDraging(true)}
                 onMouseUp={() => setDraging(false)}
                 onTouchEnd={() => setDraging(false)}
-                className={`Seek_help w-[90%] appearance-none cursor-pointer accent-white hover:accent-gray-300 rounded-full ${isDraging ? 'h-2' : 'h-1'} transition-h duration-200 ease-in-out`}
+                className={`Seek_help w-[90%] appearance-none cursor-pointer accent-white hover:accent-gray-300 rounded-full ${isDraging ? 'h-2' : 'h-[3px]'} transition-h duration-200 ease-in-out`}
                 style={seek_bar}
               />
             </div>

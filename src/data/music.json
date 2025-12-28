@@ -1,5 +1,13 @@
 [
   {
+    "Title":"It's Going Down Now - P3R",
+    "music_src": "/Musics/It's Going Down Now - Persona 3 Reload.mp3",
+    "banner": "/Images_Optimized/Cover/cover_art_1.webp",
+    "isplaying": false,
+    "bg" : "blue",
+    "link" : "https://www.youtube.com/watch?v=2KuWjZD6PBA"
+  },
+  {
     "Title":"Full Moon Full Life - P3R",
     "music_src": "/Musics/Full Moon Full Life - Persona 3 Reload.mp3",
     "banner": "/Images_Optimized/Cover/cover_art_411.webp",
@@ -22,14 +30,6 @@
     "isplaying": false,
     "bg" : "red",
     "link" : "https://www.youtube.com/watch?v=j9Sn1nFGQQ8"
-  },
-  {
-    "Title":"It's Going Down Now - P3R",
-    "music_src": "/Musics/It's Going Down Now - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_1.webp",
-    "isplaying": false,
-    "bg" : "blue",
-    "link" : "https://www.youtube.com/watch?v=2KuWjZD6PBA"
   },
   {
     "Title":"Mass Destruction - P3R",

@@ -19,7 +19,7 @@ const Notes = React.memo(() => {
     >
       <div className="mx-2">
         <h1 className="text-xl font-bold flex gap-1 items-center"><BsClipboard2Check size={18}/> <div className='mt-1'>Notes</div></h1>
-        <h1 className='md:text-[16px] text-[13px]'>My notes on development, events, experience or creative ideas</h1>
+        <h1 className='md:text-[13px] text-[10px]'>My notes on development, events, experience or creative ideas</h1>
         <div className="mt-3 relative ">
           <div className="DALINE h-[95%] absolute border-l top-5 left-2" />
           <div className="md:h-40 h-45 overflow-y-auto scroll_bar_thumb scroll_bar_">
@@ -29,7 +29,7 @@ const Notes = React.memo(() => {
                   <TbPointFilled className="mt-1" />
                 </div>
                 <section
-                  className={` px-4 py-2 rounded-2xl cursor-pointer ${LightTheme ? 'hover:bg-blue-200' : 'hover:bg-blue-500'}`}
+                  className={`mx-2 px-4 py-2 rounded-2xl cursor-pointer ${LightTheme ? 'hover:bg-blue-200' : 'hover:bg-blue-500'}`}
                   onClick={() => hadnleclick(item.link)}
                 >
                   <h1 className='md:text-sm text-[14px] font-semibold'>{item.title}</h1>

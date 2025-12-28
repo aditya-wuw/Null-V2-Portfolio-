@@ -6,17 +6,21 @@ const Skills = React.memo(() => {
   const { LightTheme } = createThemeContext()
   return (
     <div
-      className={`p-3 rounded-xl ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} w-full h-full`}
+      className={`rounded-xl select-none relative z-20 ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} w-full h-full`}
     >
-      <h1 className="text-xl font-bold mx-2">Skills</h1>
-      <div className="flex flex-wrap gap-2 mx-2 mt-4">
+      <div className="absolute overflow-hidden w-full h-full p-3 group">
+        <h1 className="absolute text-[120px] font-extrabold mx-2 opacity-15 -right-5 -rotate-2 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out">
+          Skills
+        </h1>
+      </div>
+      <div className="flex flex-wrap gap-2 mx-2 p-3">
         {skillsData.items.map((item, i) => (
           <div
             key={i}
-            className="relative group hover:scale-105 scale-100 cursor-pointer"
+            className="relative group  hover:scale-105 scale-100 cursor-pointer"
           >
             <span
-              className={`absolute -top-10 left-1/2 -translate-x-1/2 z-10 opacity-0 group-hover:opacity-100 p-2 text-xs whitespace-nowrap pointer-events-none rounded-2xl ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
+              className={`absolute -top-10 left-1/2 -translate-x-1/2  opacity-0 group-hover:opacity-100 p-2 text-xs whitespace-nowrap pointer-events-none rounded-2xl ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
             >
               {item.Name}
             </span>

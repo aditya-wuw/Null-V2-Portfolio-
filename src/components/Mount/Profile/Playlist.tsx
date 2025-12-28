@@ -39,7 +39,7 @@ const Playlist = () => {
       <div className="lg:p-1 lg:pb-3 lg:px-3 p-4 overflow-y-auto max-h-[50vh] scroll_bar_ scroll_bar_thumb group cursor-pointer">
         {Music.map((track, i: number) => (
           <motion.section
-            className={`flex gap-3 items-center group rounded-xl ${LightTheme ? 'hover:bg-gray-800/20' : 'hover:bg-white/20'} py-3 xl:px-5 px-1 justify-between`}
+            className={`flex gap-3 items-center relative z-50 group rounded-xl ${LightTheme ? 'hover:bg-gray-800/20' : 'hover:bg-white/20'} py-3 xl:px-5 px-1 justify-between`}
             key={i}
             whileInView={{ y: [-20, 0] }}
             transition={{ duration: (1 + i) / 16 }}

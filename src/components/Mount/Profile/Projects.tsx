@@ -89,8 +89,8 @@ const Projects = React.memo(() => {
                 onClick={() => Navigate(item.Link)}
                 title={'view details ' + item.title}
               >
-                <h1 className="text-xl font-bold">{item.title}</h1>
-                <h1 className="md:text-sm text-[10px]">{item.description}</h1>
+                <h1 className="text-md font-bold">{item.title}</h1>
+                <h1 className="md:text-[13px] text-[10px]">{item.description}</h1>
                 {!islist && !disabled && (
                   <motion.div
                     initial={{ opacity: 0 }}

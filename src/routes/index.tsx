@@ -63,7 +63,7 @@ function App() {
             <div className="md:w-[40%] 2xl:h-34">
               <Skills />
             </div>
-            <div className="md:w-[calc(100%-40%)] h-33">
+            <div className="md:w-[calc(100%-40%)] h-34">
               <MusicEmbed />
             </div>
           </div>

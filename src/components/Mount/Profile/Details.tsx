@@ -5,6 +5,7 @@ import { GrTechnology } from 'react-icons/gr'
 import React, { Suspense } from 'react'
 import { RiReactjsLine } from 'react-icons/ri'
 import { TbCertificate } from 'react-icons/tb'
+import { FaLocationPin } from 'react-icons/fa6'
 import { contactData, details } from '@/data/data'
 import { createThemeContext } from '@/Context/context'
 
@@ -16,7 +17,12 @@ const Details = React.memo(() => {
     <div
       className={`select-none h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
-      <h1 className="text-xl font-bold mb-5">Details</h1>
+      <div className="absolute w-full h-full group">
+        <h1 className="absolute text-[70px] font-extrabold mb-2 opacity-20 -bottom-7 right-0 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out">
+          Details
+        </h1>
+      </div>
+      {/* <h1 className="text-xl font-bold mb-5">Details</h1> */}
       <section className="flex justify-center gap-2">
         <a href={contactData.gh} target="_blank">
           <FaGithub className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />
@@ -33,13 +39,20 @@ const Details = React.memo(() => {
           <h1>CV</h1>
         </a> */}
       </section>
+      <div className="mx-1 flex gap-2 items-center mt-2 text-sm">
+        <FaLocationPin size={14} />
+        India
+      </div>
       <div className="text-[15px] m-1">
         <a
           href={`mailto:${contactData.email}`}
-          className="transition-scale duration-200 ease-in-out flex items-center  gap-1 break-all text-md"
+          className="transition-scale duration-200 ease-in-out flex items-center gap-1 break-all relative z-20"
         >
-          <MdAttachEmail className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />{' '}
-          <h2 className="text-sm">{contactData.email}</h2>
+          <MdAttachEmail
+            size={15}
+            className="cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out"
+          />{' '}
+          <h2 className="text-xs cursor-pointer">{contactData.email}</h2>
         </a>
       </div>
       <div className="mx-1">

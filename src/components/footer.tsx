@@ -5,7 +5,7 @@ import { contactData } from '@/data/data'
 
 const Footer = () => {
   const { LightTheme } = createThemeContext()
-  const lastupdated = '27th Dec'
+  const lastupdated = '28th Dec'
   return (
     <div
       className={`p-3 rounded-t-2xl text-center ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'}`}

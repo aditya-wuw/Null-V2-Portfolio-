@@ -8,7 +8,6 @@ export default function Header() {
     <header
       className={`select-none p-3 relative h-[102%] overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30 ' : 'bg-black text-white border border-white/30 '} bottom-3 relative`}
     >
-      <h1 className="text-xl font-bold mb-2">About</h1>
       <div className="profile_wrapper flex gap-3">
         <div className="relative top-1">
           <div className="w-10 h-10 rounded-full overflow-hidden">

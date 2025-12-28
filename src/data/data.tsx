@@ -30,12 +30,21 @@ export const navLinks = [
 export const heroData = {
   name: 'Aditya Mandal',
   role: 'aka @NulledFacedDev',
-  about_ln1:
-    'Developer dabbling in Full-Stack with 1+ year of hands-on learning experience in web apps and website development -',
-  about_ln2:
-    "currently a college student. I'm a self taught developer usually creating apps or sites using React, Next, TanStack, Supabase and TailwindCSS",
+  about_ln1: (
+    <p>
+      <span className="font-bold">Full-Stack developer</span> and college
+      student based in <strong>West Bengal, India</strong>.
+    </p>
+  ),
+  about_ln2: (
+    <span>
+      I'm a self taught developer usually creating apps or sites leveraging
+      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for Development and <strong>use TailwindCSS and Motion </strong>
+      for styling.
+    </span>
+  ),
   about_ln3:
-    'I am open to freelance opportunities and contributions. Please reach out if you have a project in mind',
+    "Currently exploring game development and content creaton on the side",
 }
 
 export const contactData = {
@@ -198,7 +207,7 @@ export const OngoingProjects = [
       'AI-powered web app that generates personalized mock tests,notes and schedules to help students prepare effectively for exams and studying.send a prompt and see the magic as it creates a virtual mock test simulation for you.',
     additional_dec:
       'This is my fullstack personal project and a MVP will be released soon',
-    image: assets.screenshot2,
+    image: null,
     tags: [
       'NEXT',
       <RiTailwindCssFill size={18} />,
@@ -207,7 +216,7 @@ export const OngoingProjects = [
     ],
     links: [
       {
-        label: 'View Demo',
+        label: 'Demo',
         url: 'https://mogger-mog-your-exams.vercel.app/',
       },
     ],
@@ -331,6 +340,6 @@ export const projectsData = {
 
 export const TextContent = {
   title: 'Thank you for Visiting',
-  content: 'I wrote all UI code :3',
+  content: ':3',
   by: 'Null faced dev',
 }

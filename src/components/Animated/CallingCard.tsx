@@ -1,19 +1,18 @@
-import {  useState } from 'react'
-import {  motion } from 'motion/react'
-import type {Variants} from 'motion/react';
-import type {JSX} from 'react';
+import { useState } from 'react'
+import { motion } from 'motion/react'
+import type { Variants } from 'motion/react'
+import type { JSX } from 'react'
 import { assets } from '@/Assets/assets'
 
 const { phantomtheves } = assets
 
 interface props {
-  User_color : string,
-  Text_content : {
-    title : string,
-    content : string,
-    by:string
+  User_color: string
+  Text_content: {
+    title: string
+    content: string
+    by: string
   }
-
 }
 
 const CallingCard = ({ User_color, Text_content }: props) => {
@@ -28,23 +27,19 @@ const CallingCard = ({ User_color, Text_content }: props) => {
   }
 
   const hueCycle: Variants = {
-  // Define a name for this animation (e.g., 'cycle')
-  cycle: {
-    // The value you are animating is the 'filter' CSS property
-    // Keyframes are defined inside the array: [startValue, middleValue, endValue]
-    filter: [
-      'hue-rotate(190deg)', // Starts with no rotation
-      'hue-rotate(270deg)', // Halfway point
-      'hue-rotate(200deg)', // Ends at 360 degrees (same visual as 0deg)
-    ],
-    // Configuration for the animation
-    transition: {
-      duration: 1, // The time it takes for one full cycle (e.g., 10 seconds)
-      ease: 'linear', // Consistent speed
-      repeat: Infinity, // Loop the animation forever
+    cycle: {
+      filter: [
+        'hue-rotate(190deg)',
+        'hue-rotate(270deg)',
+        'hue-rotate(200deg)',
+      ],
+      transition: {
+        duration: 1,
+        ease: 'linear',
+        repeat: Infinity,
+      },
     },
-  },
-};
+  }
 
   const sizes: Array<string> = [
     'lg:w-190 lg:h-190 w-85 h-85',
@@ -58,7 +53,7 @@ const CallingCard = ({ User_color, Text_content }: props) => {
   let content: JSX.Element | null = null
 
   const color: string = User_color
-  const Text = Text_content 
+  const Text = Text_content
 
   for (let i = sizes.length - 1; i >= 0; i--) {
     content = (
@@ -78,7 +73,9 @@ const CallingCard = ({ User_color, Text_content }: props) => {
       variants={fadeAnimation}
       animate={'fade'}
     >
-      <span className='P5titlefont rotate-15 absolute top-5 left-5 text-4xl text-white z-20 group-hover:opacity-100 opacity-0 max-lg:opacity-100 transition duration-200 ease-in-out'>Tap ?</span>
+      <span className="P5titlefont rotate-15 absolute top-5 left-5 text-4xl text-white z-20 group-hover:opacity-100 opacity-0 max-lg:opacity-100 transition duration-200 ease-in-out">
+        Tap ?
+      </span>
       {content}
       <motion.img
         src={phantomtheves}
@@ -105,9 +102,7 @@ const CallingCard = ({ User_color, Text_content }: props) => {
       {content}
       <section className="absolute P5titlefont text-white text-center mx-3">
         <h1 className="lg:text-6xl text-3xl">{Text.title}</h1>
-        <p className="lg:text-2xl text-xl lg:mt-3 mt-1">
-          {Text.content}
-        </p>
+        <p className="lg:text-2xl text-xl lg:mt-3 mt-1">{Text.content}</p>
         <div className="text-end">
           <h1 className="lg:pr-25 pr-10 lg:text-4xl text-lg ">From</h1>
           <h1 className="lg:text-4xl text-2xl mr-2">{Text.by}</h1>
