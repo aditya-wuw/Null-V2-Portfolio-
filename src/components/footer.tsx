@@ -12,7 +12,7 @@ const Footer = () => {
     >
       <h1 className="flex items-center justify-center gap-1 mb-1">
         <FaClock className={`${LightTheme ? 'text-black' : 'text-white'}`} />{' '}
-        {lastupdated + ' ' + new Date().getFullYear()}
+        {lastupdated}
         <div className="flex gap-1 ml-2">
           <a href={contactData.gh} target="_blank">
             <FaGithub className="w-4 h-4 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />
