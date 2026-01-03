@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
+import { TbSourceCode } from 'react-icons/tb'
 import type { Variants } from 'motion/react'
 import type { JSX } from 'react'
 import { assets } from '@/Assets/assets'
+import { createThemeContext } from '@/Context/context'
 
 const { phantomtheves } = assets
 
@@ -17,7 +19,7 @@ interface props {
 
 const CallingCard = ({ User_color, Text_content }: props) => {
   const [flipped, setflipped] = useState(false)
-
+  const { LightTheme } = createThemeContext()
   const fadeAnimation: Variants = {
     // eslint-disable-next-line no-shadow
     fade: (flipped: boolean) => ({
@@ -103,6 +105,19 @@ const CallingCard = ({ User_color, Text_content }: props) => {
       <section className="absolute P5titlefont text-white text-center mx-3">
         <h1 className="lg:text-6xl text-3xl">{Text.title}</h1>
         <p className="lg:text-2xl text-xl lg:mt-3 mt-1">{Text.content}</p>
+        <div className="group/source w-full flex justify-center relative">
+          <a
+            target="_blank"
+            href="https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Animated/CallingCard.tsx"
+          >
+            <TbSourceCode size={18} color={'lightblue'} />
+            <span
+              className={`font-sans font-medium absolute group-hover/source:opacity-100 opacity-0 duration-200 ease-in-out p-2 rounded-2xl -top-10 ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
+            >
+              View source code
+            </span>
+          </a>
+        </div>
         <div className="text-end">
           <h1 className="lg:pr-25 pr-10 lg:text-4xl text-lg ">From</h1>
           <h1 className="lg:text-4xl text-2xl mr-2">{Text.by}</h1>

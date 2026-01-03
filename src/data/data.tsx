@@ -40,12 +40,13 @@ export const heroData = {
   about_ln2: (
     <span>
       I'm a self-taught developer usually creating apps or sites leveraging
-      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for development and <strong>using TailwindCSS and Motion </strong>
+      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for development
+      and <strong>using TailwindCSS and Motion </strong>
       for styling.
     </span>
   ),
   about_ln3:
-    "Currently exploring game development and content creation on the side",
+    'Currently exploring game development and content creation on the side',
 }
 
 export const contactData = {
@@ -72,7 +73,7 @@ export const details = {
       <RiNextjsFill className="hover:scale-115 scale-100 cursor-pointer" />
       <SiTypescript className="hover:scale-115 scale-100 cursor-pointer" />
       <RiReactjsFill className="hover:scale-115 scale-100 cursor-pointer" />
-      <RiSupabaseFill className="hover:scale-115 scale-100 cursor-pointer"/>
+      <RiSupabaseFill className="hover:scale-115 scale-100 cursor-pointer" />
     </span>
   ),
 }
@@ -325,7 +326,14 @@ export const projectsData = {
         </p>
       ),
       image: assets.screenshot5,
-      tags: [<RiReactjsFill size={18} />, 'Express', 'MongoDB'],
+      tags: [
+        <RiReactjsFill size={18} />,
+        'Express',
+        <span className='flex items-center gap-1'>
+          <SiMongodb size={18} />
+          <h1>MongoDB</h1>
+        </span>,
+      ],
       links: [
         {
           label: 'View',

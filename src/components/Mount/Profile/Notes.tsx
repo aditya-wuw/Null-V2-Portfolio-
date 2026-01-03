@@ -32,7 +32,7 @@ const Notes = React.memo(() => {
                   className={`mx-2 px-4 py-2 rounded-2xl cursor-pointer ${LightTheme ? 'hover:bg-blue-200' : 'hover:bg-blue-500'}`}
                   onClick={() => hadnleclick(item.link)}
                 >
-                  <h1 className='md:text-sm text-[14px] font-semibold'>{item.title}</h1>
+                  <h1 className='md:text-sm text-[14px] font-medium'>{item.title}</h1>
                   <h1 className='flex items-center gap-1 text-sm'><CgCalendar/>{item.date}</h1>
                 </section>
               </div>

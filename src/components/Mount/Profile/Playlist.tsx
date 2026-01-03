@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { FaExternalLinkAlt, FaPause } from 'react-icons/fa'
 import { FaPlay } from 'react-icons/fa6'
 import { RiArrowUpWideFill } from 'react-icons/ri'
+import { TbSourceCode } from 'react-icons/tb'
 import Music from '@/data/music.json'
 import { createThemeContext } from '@/Context/context'
 
@@ -65,6 +66,25 @@ const Playlist = () => {
             </div>
           </motion.section>
         ))}
+        <footer className="relative z-30 flex justify-center items-center gap-2 text-md max-md:text-xs max-md:overflow-hidden">
+          My favorite music from Persona 3 Reload :3
+          <div className="group/source">
+            <a
+              target="_blank"
+              href="https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx"
+            >
+              <TbSourceCode
+                size={18}
+                color={LightTheme ? 'blue' : 'lightblue'}
+              />
+              <span
+                className={`absolute group-hover/source:opacity-100 opacity-0 duration-200 ease-in-out p-2 rounded-2xl -top-10 ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
+              >
+                View source code
+              </span>
+            </a>
+          </div>
+        </footer>
       </div>
     </motion.div>
   )
