@@ -2,6 +2,7 @@ import { FaFigma, FaNodeJs, FaPython, FaReact, FaRust } from 'react-icons/fa'
 import {
   RiNextjsFill,
   RiReactjsFill,
+  RiSupabaseFill,
   RiTailwindCssFill,
   RiVideoOnAiFill,
 } from 'react-icons/ri'
@@ -32,19 +33,19 @@ export const heroData = {
   role: 'aka @NulledFacedDev',
   about_ln1: (
     <p>
-      <span className="font-bold">Full-Stack developer</span> and college
+      <span className="font-bold">Full-Stack Developer</span> and college
       student based in <strong>West Bengal, India</strong>.
     </p>
   ),
   about_ln2: (
     <span>
-      I'm a self taught developer usually creating apps or sites leveraging
-      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for Development and <strong>use TailwindCSS and Motion </strong>
+      I'm a self-taught developer usually creating apps or sites leveraging
+      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for development and <strong>using TailwindCSS and Motion </strong>
       for styling.
     </span>
   ),
   about_ln3:
-    "Currently exploring game development and content creaton on the side",
+    "Currently exploring game development and content creation on the side",
 }
 
 export const contactData = {
@@ -71,6 +72,7 @@ export const details = {
       <RiNextjsFill className="hover:scale-115 scale-100 cursor-pointer" />
       <SiTypescript className="hover:scale-115 scale-100 cursor-pointer" />
       <RiReactjsFill className="hover:scale-115 scale-100 cursor-pointer" />
+      <RiSupabaseFill className="hover:scale-115 scale-100 cursor-pointer"/>
     </span>
   ),
 }
