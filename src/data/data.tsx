@@ -198,7 +198,7 @@ export const OngoingProjects = [
     title: 'Koneko AI',
     Link: 'Mogger_AI',
     started: '20th dec 2025',
-    // required
+    ended: '10th jan 2026',
     contributers: [
       {
         label: 'aditya',
@@ -207,9 +207,7 @@ export const OngoingProjects = [
       },
     ],
     description:
-      'AI-powered web app that generates personalized mock tests,notes and schedules to help students prepare effectively for exams and studying.send a prompt and see the magic as it creates a virtual mock test simulation for you.',
-    additional_dec:
-      'This is my fullstack personal project and a MVP will be released soon',
+      'AI-powered web app that generates personalized mock tests and notes to help students prepare effectively for exams and studying.send a prompt and start preparing as it creates a virtual mock test simulation for you.',
     image: null,
     tags: [
       'NEXT',
@@ -329,7 +327,7 @@ export const projectsData = {
       tags: [
         <RiReactjsFill size={18} />,
         'Express',
-        <span className='flex items-center gap-1'>
+        <span className="flex items-center gap-1">
           <SiMongodb size={18} />
           <h1>MongoDB</h1>
         </span>,

@@ -13,7 +13,7 @@ const Context_Provider = createContext<null | any>(null)
 
 export const Context_Provider_wrap = React.memo(
   ({ children }: { children: React.ReactNode }) => {
-    const [LightTheme, setTheme] = useState(false)
+    const [LightTheme, setTheme] = useState(true)
     const Music_ref = useRef<HTMLAudioElement | null>(null)
     const Rotate_control_ref = useRef<AnimationPlaybackControls | null>(null)
     const [isplaying, setplaying] = useState(false)

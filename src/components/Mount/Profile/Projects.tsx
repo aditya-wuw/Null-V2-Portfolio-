@@ -44,7 +44,7 @@ const Projects = React.memo(() => {
       <div className={`p-3 ${LightTheme ? 'bg-white' : 'bg-black text-white'}`}>
         <div>
           <div className="flex justify-between w-full mx-1 px-2">
-            <h1 className="font-bold text-xl">Projects</h1>
+            <h1 className="font-bold text-xl"></h1>
             <button
               className={`${disabled && 'hidden'} scale-115 cursor-pointer hover:scale-120 transition-scale duration-200 ease-in-out`}
               onClick={handleClick}

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'motion/react'
 import Loader from '@/components/Loader'
@@ -26,12 +26,18 @@ export const Route = createFileRoute('/')({
 })
 
 function App() {
-  const { LightTheme } = createThemeContext()
+  useEffect(() => {
+    if (!localStorage.getItem('theme')) {
+      setTheme('Light')
+      sessionStorage.setItem('theme', 'Light')
+    }
+  }, [])
+  const { LightTheme, setTheme } = createThemeContext()
   return (
     <div id="About" className="relative">
       <div className={`flex flex-col gap-2 wrap-break-word`}>
         <section>
-          <div className='h-full absolute w-full'>
+          <div className="h-full absolute w-full">
             <Nav />
           </div>
           <div
