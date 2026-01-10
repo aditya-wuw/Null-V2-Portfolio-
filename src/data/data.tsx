@@ -334,7 +334,7 @@ export const projectsData = {
       ],
       links: [
         {
-          label: 'View',
+          label: 'Demo',
           url: 'https://hms-dashbord-1.onrender.com/',
         },
         {
