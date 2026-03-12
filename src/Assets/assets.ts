@@ -4,6 +4,7 @@ import Fireship from './fireship.jpg'
 import minecraft_ from './Screenshot 2025.08.09 - 21.11.10.05.png'
 import vro from './vro.png'
 import phantomtheves from './callingcard/Phantom-Thieves-of-Hearts-Logo.png'
+import ow from "./ow.png"
 
 export const assets = {
   screenshot5,
@@ -11,4 +12,5 @@ export const assets = {
   minecraft_,
   vro,
   phantomtheves,
+  ow
 }

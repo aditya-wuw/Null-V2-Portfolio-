@@ -28,7 +28,7 @@ const MusicEmbed = React.memo(() => {
   const [ShowVolume, setShowVolume] = useState(false)
   const [Timeline, setTimeline] = useState<number | undefined>(0)
   const [isDraging, setDraging] = useState(false)
-  const [AutoPlayON, setAutoPlayON] = useState(false)
+  const [AutoPlayON, setAutoPlayON] = useState(true)
   const [isBGLoadedHUH, setisBGLoadedHUH] = useState(false)
 
   useEffect(() => {

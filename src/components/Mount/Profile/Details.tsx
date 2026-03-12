@@ -15,7 +15,7 @@ const Details = React.memo(() => {
   const { LightTheme } = createThemeContext()
   return (
     <div
-      className={`select-none h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
+      className={`select-none rounded-sm h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
       <div className="absolute w-full h-full group">
         <h1 className="absolute text-[70px] font-extrabold mb-2 opacity-20 -bottom-7 right-0 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out">

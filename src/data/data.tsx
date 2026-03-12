@@ -46,7 +46,7 @@ export const heroData = {
     </span>
   ),
   about_ln3:
-    'Currently exploring game development and content creation on the side',
+    'Currently exploring game development, 3D modeling and content creation on the side',
 }
 
 export const contactData = {
@@ -223,6 +223,7 @@ export const OngoingProjects = [
     ],
   },
 ]
+
 export const projectsData = {
   title: 'Projects',
   items: [

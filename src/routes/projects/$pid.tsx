@@ -53,7 +53,7 @@ function RouteComponent() {
                     Linkitem.label !== 'none' && (
                       <a
                         key={LinkIndex}
-                        className={`${typeof Linkitem.label === 'string' && Linkitem.label !== 'none' && 'p-1 bg-blue-500 rounded-md'}`}
+                        className={`${typeof Linkitem.label === 'string' && Linkitem.label !== 'none' && 'p-1 bg-blue-500 rounded-md text-white'}`}
                         href={Linkitem.url}
                       >
                         {Linkitem.label}

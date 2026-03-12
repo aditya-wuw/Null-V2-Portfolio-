@@ -44,14 +44,14 @@ function RouteComponent() {
                     {item.posted && !item.edited ? 'posted on ' : 'edited '}
                     {item.date}
                   </h1>
-                  {item.banner != null && (
-                    <div className="h-55 max-[482px]:h-35 w-full overflow-hidden rounded-2xl relative">
+                  {item.banner && (
+                    <div className="h-65 max-[482px]:h-35 w-full overflow-hidden rounded-2xl relative">
                       <img
                         onLoad={() => setloading(true)}
                         src={item.banner}
                         width={2000}
-                        height={300}
-                        className="object-cover 2xl:-top-30 xl:-top-15 absolute"
+                        height={500}
+                        className="object-cover 2xl:-top-10 xl:-top-15 absolute"
                       />
                     </div>
                   )}
