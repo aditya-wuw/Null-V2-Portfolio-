@@ -164,8 +164,8 @@ const MusicEmbed = React.memo(() => {
   return (
     <div
       className={`w-full h-full select-none relative rounded-2xl  ${MusicData[last].bg === 'red' ? 'bg-red-500' : 
-        MusicData[last].bg === 'black' ? 'bg-black/80':
-        MusicData[last].bg === 'cyan' ? 'bg-cyan-500/80':
+        MusicData[last].bg === 'black' ? 'bg-black':
+        MusicData[last].bg === 'cyan' ? 'bg-cyan-500':
         MusicData[last].bg === 'green' ? 'bg-green-500':
         MusicData[last].bg === 'DarkBlue' ? 'bg-blue-800':
         MusicData[last].bg === 'pink' ? 'bg-pink-500' : 'bg-blue-500/80'} transition duration-200 ease-in-out`}
@@ -180,7 +180,7 @@ const MusicEmbed = React.memo(() => {
           src={MusicData[last].banner}
           alt="bg-media-player"
           draggable="false"
-          className={`bg_cover object-cover select-none absolute 2xl:-top-12 top-0 right-0 mask-r-from-50% z-1 mask-l-from-70%`}
+          className={`bg_cover object-cover select-none max-sm:scale-110 absolute 2xl:-top-12  right-0 mask-r-from-50% z-1 mask-l-from-70%`}
           key={last}
           initial={{ opacity: 0 }}
           animate={{ opacity: isBGLoadedHUH ? 1 : 0 }}

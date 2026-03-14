@@ -3,7 +3,6 @@ import { motion } from 'motion/react'
 import { FaExternalLinkAlt, FaPause } from 'react-icons/fa'
 import { FaPlay } from 'react-icons/fa6'
 import { RiArrowUpWideFill } from 'react-icons/ri'
-import { TbSourceCode } from 'react-icons/tb'
 import Music from '@/data/music.json'
 import { createThemeContext } from '@/Context/context'
 
@@ -40,7 +39,7 @@ const Playlist = () => {
       <div className="lg:p-1 lg:pb-3 lg:px-3 p-4 overflow-y-auto max-h-[50vh] scroll_bar_ scroll_bar_thumb group cursor-pointer">
         {Music.map((track, i: number) => (
           <motion.section
-            className={`flex gap-3 items-center relative z-50 group rounded-xl ${LightTheme ? 'hover:bg-gray-800/20' : 'hover:bg-white/20'} py-3 xl:px-5 px-1 justify-between`}
+            className={`flex gap-3 items-center relative z-20 group rounded-xl ${LightTheme ? 'hover:bg-gray-800/20' : 'hover:bg-white/20'} py-3 xl:px-5 px-1 justify-between`}
             key={i}
             whileInView={{ y: [-20, 0] }}
             transition={{ duration: (1 + i) / 16 }}
@@ -68,24 +67,6 @@ const Playlist = () => {
             )}
           </motion.section>
         ))}
-        <footer className="relative z-30 flex justify-center items-center gap-2 text-md max-md:text-xs max-md:overflow-hidden">
-          <div className="group/source">
-            <a
-              target="_blank"
-              href="https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx"
-            >
-              <TbSourceCode
-                size={18}
-                color={LightTheme ? 'blue' : 'lightblue'}
-              />
-              <span
-                className={`absolute group-hover/source:opacity-100 opacity-0 duration-200 ease-in-out p-2 rounded-2xl -top-12 ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
-              >
-                View source code
-              </span>
-            </a>
-          </div>
-        </footer>
       </div>
     </motion.div>
   )
