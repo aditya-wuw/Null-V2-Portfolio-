@@ -1,20 +1,20 @@
 import { motion, useInView } from 'motion/react'
 import React, { useEffect, useRef } from 'react'
 import { createThemeContext } from '@/Context/context'
-import video from '/Video_bg/Persona -3-Reload Menu-bg.mp4'
+import video from '/Video_bg/_fuji_loop.mp4'
 
 const Cover = React.memo(() => {
   const { LightTheme, setisinView } = createThemeContext()
-  const AMinView = useRef<HTMLAnchorElement | null>(null)
+  const AMinView = useRef<HTMLDivElement | null>(null)
   const videoref = useRef<HTMLVideoElement>(null)
   const isInView = useInView(AMinView)
   useEffect(() => {
     setisinView(isInView)
   }, [isInView, videoref])
+
+
   return (
-    <motion.a
-      href="https://www.youtube.com/watch?v=60wWZH49MzE"
-      target="_black"
+    <motion.div
       ref={AMinView}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -22,22 +22,23 @@ const Cover = React.memo(() => {
     >
       <div className="relative">
         <h1
-          className={`absolute z-2 -rotate-2 italic top-8 right-0 text-9xl max-lg:text-8xl max-lg:top-15 max-sm:text-7xl max-sm:top-11 font-extrabold ${LightTheme ? 'text-blue-200' : 'text-black'}`}
+          className={`mask-l-from-70% lg:p-15 max-sm:p-5 absolute z-2 -rotate-2 italic top-0 lg:-right-15 -right-2 text-8xl max-lg:text-8xl max-lg:top-15 max-sm:text-6xl max-sm:top-6 max-sm:-right-5 backdrop-blur-[3px] font-extrabold ${LightTheme ? 'text-white/60' : 'text-black/80'}`}
         >
           アディ
         </h1>
         <video
           src={video}
-          className={` absolute lg:-top-23 transition-opacity ease-in-out duration-200 bg-blue-500`}
+          className={` absolute lg:-top-23 transition-opacity ease-in-out duration-200`}
           width={2250}
           height={1200}
           muted
           autoPlay
           loop
           playsInline
+          preload='auto'
         />
       </div>
-    </motion.a>
+    </motion.div>
   )
 })
 

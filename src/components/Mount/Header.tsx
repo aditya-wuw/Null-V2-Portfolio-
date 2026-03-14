@@ -10,18 +10,18 @@ export default function Header() {
     >
       <div className="profile_wrapper flex gap-3">
         <div className="relative top-1">
-          <div className="w-10 h-10 rounded-full overflow-hidden">
+          <div className="w-10 h-10 rounded-full overflow-hidden shadow-2xl">
             <img
               src="/Images_Optimized/Profile/logo_new.png"
               loading="lazy"
               alt="Logo_nullfaced_dev.png"
-              className="object-cover object-center"
+              className="object-cover object-center mt-1 ml-0.3 scale-120"
               width={256}
               height={256}
             />
           </div>
         </div>
-        <div className="w-[90%]">
+        <div className="w-[90%] mt-2">
           <h1>Hi, I'm {heroData.name}</h1>
           <h1 className="md:text-sm text-[15px]">{heroData.role}</h1>
         </div>

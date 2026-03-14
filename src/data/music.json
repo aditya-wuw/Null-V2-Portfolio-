@@ -1,50 +1,46 @@
 [
   {
-    "Title":"It's Going Down Now - P3R",
-    "music_src": "/Musics/It's Going Down Now - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_1.webp",
+    "Title": "Try Again - Original by Nullfacedev",
+    "music_src": "Musics/Try Again - Original.wav",
+    "banner": "/Images_Optimized/Cover/02.jpg",
     "isplaying": false,
-    "bg" : "blue",
-    "link" : "https://www.youtube.com/watch?v=2KuWjZD6PBA"
+    "bg": "cyan"
   },
   {
-    "Title":"Full Moon Full Life - P3R",
-    "music_src": "/Musics/Full Moon Full Life - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_411.webp",
+    "Title": "lvymusic dnb - lucid",
+    "music_src": "public/Musics/lvymusic-dnb-liquid-141072.mp3",
+    "banner": "/Images_Optimized/Cover/05.jpg",
     "isplaying": false,
-    "bg" : "blue",
-    "link" : "https://www.youtube.com/watch?v=hWhgrA2dhrk"
+    "bg": "blue"
   },
   {
-    "Title":"Don't - P3R Episode Aigis",
-    "music_src": "/Musics/Don't - Persona 3 Reload Episode Aigis.mp3",
-    "banner": "/Images_Optimized/Cover/just-did-a-quick-aigis-episode-wp.webp",
+    "Title": "Musinova neon sky - just escape",
+    "music_src": "public/Musics/musinova-neon-sky-liquid-jungle-breakbeat-drum-and-bass-no-vocal-samples-356501.mp3",
+    "banner": "/Images_Optimized/Cover/06.jpg",
     "isplaying": false,
-    "bg" : "red",
-    "link" : "https://www.youtube.com/watch?v=69q6lWeaCmk"
+    "bg": "black"
   },
   {
-    "Title":"Color Your Night - P3R",
-    "music_src": "/Musics/Color Your Night - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_69.webp",
+    "Title": "Aka4aerk- aerk",
+    "music_src": "Musics/aka4aerk-aerk-title-86-418636.mp3",
+    "banner": "/Images_Optimized/Cover/01.jpg",
     "isplaying": false,
-    "bg" : "red",
-    "link" : "https://www.youtube.com/watch?v=j9Sn1nFGQQ8"
+    "bg": "black",
+    "link": ""
   },
   {
-    "Title":"Mass Destruction - P3R",
-    "music_src": "/Musics/Mass Destruction - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_31.webp",
+    "Title": "Astral Realms - ionosphere",
+    "music_src": "Musics/daljit_kundi-astral-realms-amp-ziyal-ionosphere-463441.mp3",
+    "banner": "/Images_Optimized/Cover/03.jpg",
     "isplaying": false,
-    "bg" : "blue",
-    "link" : "https://www.youtube.com/watch?v=Q6q6pDC6Mas"
+    "bg": "DarkBlue"
   },
   {
-    "Title":"Want To Be Close  - P3R",
-    "music_src": "/Musics/Want To Be Close - Persona 3 Reload.mp3",
-    "banner": "/Images_Optimized/Cover/cover_art_420.webp",
+    "Title": "fronbondi skegs beat - where are you",
+    "music_src": "Musics/fronbondi_skegs-beat-where-are-you-liquid-dnb-beat-439768.mp3",
+    "banner": "/Images_Optimized/Cover/04.jpg",
     "isplaying": false,
-    "bg" : "pink",
-    "link" : "https://www.youtube.com/watch?v=jKYB5P5g2Uc"
+    "bg": "blue"
   }
+
 ]

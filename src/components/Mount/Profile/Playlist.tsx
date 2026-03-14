@@ -59,15 +59,16 @@ const Playlist = () => {
               </span>
               <h1>{track.Title}</h1>
             </div>
-            <div>
-              <a href={track.link} target="_blank">
-                <FaExternalLinkAlt className="cursor-pointer scale-90 hover:scale-125 transtion duration-300 ease-in-out" />
-              </a>
-            </div>
+            {track.link && (
+              <div>
+                <a href={track.link} target="_blank">
+                  <FaExternalLinkAlt className="cursor-pointer scale-90 hover:scale-125 transtion duration-300 ease-in-out" />
+                </a>
+              </div>
+            )}
           </motion.section>
         ))}
         <footer className="relative z-30 flex justify-center items-center gap-2 text-md max-md:text-xs max-md:overflow-hidden">
-          My favorite music from Persona 3 Reload :3
           <div className="group/source">
             <a
               target="_blank"
@@ -78,7 +79,7 @@ const Playlist = () => {
                 color={LightTheme ? 'blue' : 'lightblue'}
               />
               <span
-                className={`absolute group-hover/source:opacity-100 opacity-0 duration-200 ease-in-out p-2 rounded-2xl -top-10 ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
+                className={`absolute group-hover/source:opacity-100 opacity-0 duration-200 ease-in-out p-2 rounded-2xl -top-12 ${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}
               >
                 View source code
               </span>

@@ -3,7 +3,7 @@ import Fireship from './fireship.jpg'
 // import CV from '/Aditya Mandal Resume 2025.pdf'
 import minecraft_ from './Screenshot 2025.08.09 - 21.11.10.05.png'
 import vro from './vro.png'
-import phantomtheves from './callingcard/Phantom-Thieves-of-Hearts-Logo.png'
+import ht from './callingcard/8973086.png'
 import ow from "./ow.png"
 
 export const assets = {
@@ -11,6 +11,6 @@ export const assets = {
   Fireship,
   minecraft_,
   vro,
-  phantomtheves,
+  ht,
   ow
 }

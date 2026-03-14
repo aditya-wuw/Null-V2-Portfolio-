@@ -17,9 +17,9 @@ const Projects = React.lazy(() => import('@/components/Mount/Profile/Projects'))
 const Notes = React.lazy(() => import('@/components/Mount/Profile/Notes'))
 const Footer = React.lazy(() => import('@/components/footer'))
 const Playlist = React.lazy(() => import('@/components/Mount/Profile/Playlist'))
-const Bomberdilocrocodilo = React.lazy(
-  () => import('@/components/bomberdilocrocodilo'),
-)
+// const Bomberdilocrocodilo = React.lazy(
+//   () => import('@/components/bomberdilocrocodilo'),
+// )
 
 export const Route = createFileRoute('/')({
   component: App,
@@ -93,20 +93,22 @@ function App() {
           <Suspense>
             <div className="flex max-md:flex-col gap-3 mb-2">
               <Notes />
-              <div>
-                <CallingCard
-                  User_color="bg-blue-400"
-                  Text_content={TextContent}
-                />
-              </div>
+              {/* <div className="w-[0%]">
+                <div className='scale-90'>
+                  <CallingCard
+                    User_color="bg-blue-400"
+                    Text_content={TextContent}
+                  />
+                </div>
+              </div> */}
             </div>
           </Suspense>
         </motion.section>
-        <section>
+        {/* <section>
           <Suspense>
             <Bomberdilocrocodilo />
           </Suspense>
-        </section>
+        </section> */}
         <footer className="w-full">
           <Suspense fallback={<Loader />}>
             <Footer />

@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { TbSourceCode } from 'react-icons/tb'
+import { FaHeart } from 'react-icons/fa'
 import type { Variants } from 'motion/react'
 import type { JSX } from 'react'
 import { assets } from '@/Assets/assets'
 import { createThemeContext } from '@/Context/context'
 
-const { phantomtheves } = assets
+const { ht } = assets
 
 interface props {
   User_color: string
@@ -34,11 +35,18 @@ const CallingCard = ({ User_color, Text_content }: props) => {
         'hue-rotate(190deg)',
         'hue-rotate(270deg)',
         'hue-rotate(200deg)',
+        'hue-rotate(190deg)', // Return to start for seamless loop
       ],
+
+      x: [1, -1, 1, 0],
+      y: [0, 1, -1, 0],
       transition: {
-        duration: 1,
-        ease: 'linear',
-        repeat: Infinity,
+        filter: {
+          duration: 0.6,
+          repeat: Infinity,
+        },
+        x: { duration: 0.2, repeat: Infinity, ease: 'linear' },
+        y: { duration: 0.2, repeat: Infinity, ease: 'linear' },
       },
     },
   }
@@ -80,16 +88,11 @@ const CallingCard = ({ User_color, Text_content }: props) => {
       </span>
       {content}
       <motion.img
-        src={phantomtheves}
+        src={ht}
         alt="theves"
-        className="w-fit lg:h-fit h-40 absolute z-10 md:top-0 top-3 hue-rotate-200"
+        className="w-fit lg:w-70 lg:h-fit h-40 absolute z-10 md:top-0 top-3 hue-rotate-200"
         variants={hueCycle}
         animate="cycle"
-      />
-      <img
-        src={phantomtheves}
-        alt="theves"
-        className="scale-103 w-fit lg:h-fit  h-41 absolute z-9 filter invert brightness-0 lg:top-1 md:top-0 top-3"
       />
     </motion.div>
   )
@@ -127,7 +130,7 @@ const CallingCard = ({ User_color, Text_content }: props) => {
   )
 
   return (
-    <div className="">
+    <div>
       <motion.div
         className="mx-2 flex flex-col gap-2 relative cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
