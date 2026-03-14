@@ -8,14 +8,14 @@
   },
   {
     "Title": "lvymusic dnb - lucid",
-    "music_src": "public/Musics/lvymusic-dnb-liquid-141072.mp3",
+    "music_src": "Musics/lvymusic-dnb-liquid-141072.mp3",
     "banner": "/Images_Optimized/Cover/05.jpg",
     "isplaying": false,
     "bg": "blue"
   },
   {
     "Title": "Musinova neon sky - just escape",
-    "music_src": "public/Musics/musinova-neon-sky-liquid-jungle-breakbeat-drum-and-bass-no-vocal-samples-356501.mp3",
+    "music_src": "Musics/musinova-neon-sky-liquid-jungle-breakbeat-drum-and-bass-no-vocal-samples-356501.mp3",
     "banner": "/Images_Optimized/Cover/06.jpg",
     "isplaying": false,
     "bg": "black"
