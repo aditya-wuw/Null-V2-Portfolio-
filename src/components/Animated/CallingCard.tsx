@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { TbSourceCode } from 'react-icons/tb'
-import { FaHeart } from 'react-icons/fa'
 import type { Variants } from 'motion/react'
 import type { JSX } from 'react'
 import { assets } from '@/Assets/assets'
