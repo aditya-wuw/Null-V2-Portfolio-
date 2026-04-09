@@ -14,7 +14,7 @@ import Nav from '@/components/Nav'
 
 const Cover = React.lazy(() => import('@/components/Mount/Profile/Cover'))
 const Projects = React.lazy(() => import('@/components/Mount/Profile/Projects'))
-const Notes = React.lazy(() => import('@/components/Mount/Profile/Notes'))
+// const Notes = React.lazy(() => import('@/components/Mount/Profile/Notes'))
 const Footer = React.lazy(() => import('@/components/footer'))
 const Playlist = React.lazy(() => import('@/components/Mount/Profile/Playlist'))
 // const Bomberdilocrocodilo = React.lazy(
@@ -92,15 +92,15 @@ function App() {
         >
           <Suspense>
             <div className="flex max-md:flex-col gap-3 mb-2">
-              <Notes />
+              {/* <Notes /> */}
               {/* <div className="w-[0%]">
-                <div className='scale-90'>
-                  <CallingCard
-                    User_color="bg-blue-400"
-                    Text_content={TextContent}
-                  />
-                </div>
-              </div> */}
+          //       <div className='scale-90'>
+          //         <CallingCard
+          //           User_color="bg-blue-400"
+          //           Text_content={TextContent}
+          //         />
+          //       </div>
+          //     </div> */}
             </div>
           </Suspense>
         </motion.section>
