@@ -30,23 +30,21 @@ export const navLinks = [
 
 export const heroData = {
   name: 'Aditya Mandal',
-  role: 'aka @NulledFacedDev',
+  role: 'aka @Adi',
   about_ln1: (
     <p>
-      <span className="font-bold">Full-Stack Developer</span> and college
-      student based in <strong>West Bengal, India</strong>.
+      <span className="font-bold">Software Developer</span> and a college student
+      based in <strong>West Bengal, India</strong>.
     </p>
   ),
   about_ln2: (
     <span>
-      I'm a self-taught developer usually creating apps or sites leveraging
-      <strong> React-NEXT JS/TS, TanStack and Supabase</strong> for development
-      and <strong>using TailwindCSS and Motion </strong>
-      for styling.
+      I'm a self-taught developer usually creating apps or sites leveraging Web
+      Tech and simplicity in mind
     </span>
   ),
   about_ln3:
-    'Currently exploring game development, 3D modeling and content creation on the side',
+    'Currently pivoting towards entrepreneurship and business related to game development , 3D modeling and planning to start a company in the future if situations are feasible',
 }
 
 export const contactData = {
@@ -195,8 +193,37 @@ export const OngoingProjects = [
     ],
   },
   {
+    title: 'Music Player Component',
+    Link: 'Player',
+    started: '1st Feb',
+    ended: '8th Feb 2025',
+    // required
+    contributers: [
+      {
+        label: 'aditya',
+        profileUrl: '/Images_Optimized/Profile/logo_new.png',
+        link: 'https://github.com/aditya-wuw',
+      },
+    ],
+    description:
+      'Fully hand- coded the logic of the displayed music player right next to the skills tab, initially used to showcase my favorite music, but I removed them due to copyright issues. I was also learning to produce music since the start of 2026, so the music player may showcase some of my own created music in the future',
+    additional_dec: null,
+    image: null,
+    tags: [
+      <DiReact size={18} />,
+      <RiTailwindCssFill size={18}/>
+    ],
+    links: [
+      {
+        label: 'Repo',
+        url: 'https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx'
+      },
+    ],
+  },
+  {
     title: 'Koneko AI',
     Link: 'Mogger_AI',
+    status: "offline",
     started: '20th dec 2025',
     ended: '10th jan 2026',
     contributers: [
@@ -284,6 +311,7 @@ export const projectsData = {
     {
       title: 'HMS-dashboard',
       Link: 'HMS_dashboard',
+      status:"offline",
       description:
         'Was tasked to build a Admin Hospital Management System Dashboard, it is a full stack demo',
       additional_dec: 'yeah average Dev ah project what else I can say',

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { createThemeContext } from '@/Context/context'
 import { projectsData } from '@/data/data'
+import Service from '@/components/Service'
 
 const Projects = React.memo(() => {
   const { LightTheme } = createThemeContext()
@@ -89,8 +90,17 @@ const Projects = React.memo(() => {
                 onClick={() => Navigate(item.Link)}
                 title={'view details ' + item.title}
               >
-                <h1 className="text-md font-bold">{item.title}</h1>
-                <h1 className="md:text-[13px] text-[10px]">{item.description}</h1>
+                <h1 className="text-md font-bold flex items-center gap-3">
+                  {item.title}{' '}
+                  {item.status && (
+                    <span className="text-xs text-center align-center text-red-100 bg-red-400 rounded-xl p-1 px-2 cursor-help">
+                      {item.status}
+                    </span>
+                  )}
+                </h1>
+                <h1 className="md:text-[13px] text-[10px]">
+                  {item.description}
+                </h1>
                 {!islist && !disabled && (
                   <motion.div
                     initial={{ opacity: 0 }}

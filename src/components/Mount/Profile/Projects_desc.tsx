@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { RxTimer } from 'react-icons/rx'
 import { createThemeContext } from '@/Context/context'
 import { OngoingProjects } from '@/data/data'
+import Service from '@/components/Service'
 
 export default function Projects_desc() {
   const { LightTheme } = createThemeContext()
@@ -26,7 +27,15 @@ export default function Projects_desc() {
                 />
               </div>
             )}
-            <div className="font-bold text-xl mt-3">{OP.title}</div>
+            <div className="font-bold text-xl mt-3">
+              {OP.title}
+              {OP.status && (
+                <span className="group ml-5 text-xs text-center align-center text-red-100 bg-red-400 rounded-xl p-1 px-2 cursor-help">
+                  {OP.status}
+                  <span className='absolute left-50 group-hover:opacity-100 opacity-0 duration-300 ease-in-out'><Service/></span>
+                </span>
+              )}
+            </div>
             <div className="py-2 flex justify-between items-center">
               <div className="flex items-center md:text-md text-sm gap-2">
                 <RxTimer size={20} />
