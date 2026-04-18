@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { createThemeContext } from '@/Context/context'
 import { projectsData } from '@/data/data'
-import Service from '@/components/Service'
 
 const Projects = React.memo(() => {
   const { LightTheme } = createThemeContext()
