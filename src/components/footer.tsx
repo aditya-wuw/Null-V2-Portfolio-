@@ -5,11 +5,11 @@ import { contactData } from '@/data/data'
 
 const Footer = () => {
   const { LightTheme } = createThemeContext()
-  const lastupdated = '18th Apr 2026'
+  const lastupdated = '27th June 2026'
   return (
     <div
       className={`p-3 rounded-t-2xl text-center ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'}`}
-      >
+    >
       <h1 className="flex items-center justify-center gap-1 mb-1">
         <FaClock className={`${LightTheme ? 'text-black' : 'text-white'}`} />{' '}
         Last updated on {lastupdated}

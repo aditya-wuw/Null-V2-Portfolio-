@@ -33,8 +33,8 @@ export const heroData = {
   role: 'aka @Adi',
   about_ln1: (
     <p>
-      <span className="font-bold">Software Developer</span> and a college student
-      based in <strong>West Bengal, India</strong>.
+      <span className="font-bold">Full Stack Developer</span> and a college
+      student based in <strong>West Bengal, India</strong>.
     </p>
   ),
   about_ln2: (
@@ -44,7 +44,7 @@ export const heroData = {
     </span>
   ),
   about_ln3:
-    'Currently pivoting towards entrepreneurship and business related to game development , 3D modeling and planning to start a company in the future if situations are feasible',
+    'I also occasionally draw 2D, create manga that I plan to publish soon, do Game Developement from time to time',
 }
 
 export const contactData = {
@@ -162,6 +162,35 @@ export const skillsData = {
 }
 export const OngoingProjects = [
   {
+    title: "Smug Cat's Den",
+    Link: 'smugcat',
+    started: '2nd Feb 2026',
+    ended: 'Today',
+    // required
+    contributers: [
+      {
+        label: 'aditya',
+        profileUrl: '/Images_Optimized/Profile/logo_new.png',
+        link: 'https://github.com/aditya-wuw',
+      },
+    ],
+    description:
+      'This is the online brand alias I maintain to release my open source apps or products, my vision for this is very ambitions but currently narrowing it down to something more achievable and maintainable. Name came from a motivation of some self centered cats building somthing cool ha ha',
+    additional_dec: null,
+    image: null,
+    tags: ['brand', 'alias'],
+    links: [
+      // {
+      //   label: 'Repo',
+      //   url: 'https://github.com/Smug-Cat-s-Den',
+      // },
+      {
+        label: 'Learn more',
+        url: 'https://home.smgcat.site/',
+      },
+    ],
+  },
+  {
     title: 'Copy Chan',
     Link: 'Copy_History',
     started: '1st Dec',
@@ -188,7 +217,7 @@ export const OngoingProjects = [
     links: [
       {
         label: 'Repo',
-        url: 'https://github.com/aditya-wuw/CopyHistoryLinux',
+        url: 'https://github.com/Smug-Cat-s-Den/CopyHistoryLinux',
       },
     ],
   },
@@ -209,21 +238,18 @@ export const OngoingProjects = [
       'Fully hand- coded the logic of the displayed music player right next to the skills tab, initially used to showcase my favorite music, but I removed them due to copyright issues. I was also learning to produce music since the start of 2026, so the music player may showcase some of my own created music in the future',
     additional_dec: null,
     image: null,
-    tags: [
-      <DiReact size={18} />,
-      <RiTailwindCssFill size={18}/>
-    ],
+    tags: [<DiReact size={18} />, <RiTailwindCssFill size={18} />],
     links: [
       {
         label: 'Repo',
-        url: 'https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx'
+        url: 'https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx',
       },
     ],
   },
   {
     title: 'Koneko AI',
     Link: 'Mogger_AI',
-    status: "offline",
+    status: '',
     started: '20th dec 2025',
     ended: '10th jan 2026',
     contributers: [
@@ -311,7 +337,7 @@ export const projectsData = {
     {
       title: 'HMS-dashboard',
       Link: 'HMS_dashboard',
-      status:"offline",
+      status: '',
       description:
         'Was tasked to build a Admin Hospital Management System Dashboard, it is a full stack demo',
       additional_dec: 'yeah average Dev ah project what else I can say',

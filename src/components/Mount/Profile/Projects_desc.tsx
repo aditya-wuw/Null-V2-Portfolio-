@@ -13,7 +13,7 @@ export default function Projects_desc() {
       id="Projects"
       className={`rounded-md select-none mt-2 p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
-      <h1 className="text-xl font-bold">Projects</h1>
+      <h1 className="text-xl font-bold">Featured</h1>
       <div className="mt-2 flex flex-col gap-5">
         {OngoingProjects.map((OP, index) => (
           <div key={index} className="relative">
