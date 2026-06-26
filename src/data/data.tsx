@@ -175,7 +175,7 @@ export const OngoingProjects = [
       },
     ],
     description:
-      'This is the online brand alias I maintain to release my open source apps or products, my vision for this is very ambitions but currently narrowing it down to something more achievable and maintainable. Name came from a motivation of some self centered cats building somthing cool ha ha',
+      'This is the online brand alias I maintain to release my open source apps or products, my vision for this is very ambitious but currently narrowing it down to something more achievable and maintainable. Name came from a motivation of some self centered cats building somthing cool ha ha',
     additional_dec: null,
     image: null,
     tags: ['brand', 'alias'],
