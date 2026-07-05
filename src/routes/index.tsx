@@ -9,8 +9,7 @@ import { createThemeContext } from '@/Context/context'
 import MusicEmbed from '@/components/Mount/Profile/MusicEmbed'
 // import CallingCard from '@/components/Animated/CallingCard'
 // import { TextContent } from '@/data/data'
-import Projects_desc from '@/components/Mount/Profile/Projects_desc'
-import Nav from '@/components/Nav'
+// import Projects_desc from '@/components/Mount/Profile/Projects_desc'
 
 const Cover = React.lazy(() => import('@/components/Mount/Profile/Cover'))
 const Projects = React.lazy(() => import('@/components/Mount/Profile/Projects'))
@@ -37,9 +36,6 @@ function App() {
     <div id="About" className="relative">
       <div className={`flex flex-col gap-2 wrap-break-word`}>
         <section>
-          <div className="h-full absolute w-full">
-            <Nav />
-          </div>
           <div
             className={`mt-17 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
           >
@@ -80,8 +76,16 @@ function App() {
           </Suspense>
         </section>
         <section>
-          <Suspense>
-            <Projects_desc />
+          <Suspense
+            fallback={
+              <div
+                className={`${LightTheme ? 'bg-white' : 'bg-black'} rounded-md h-100 w-full flex justify-center items-center  `}
+              >
+                <Loader />
+              </div>
+            }
+          >
+            {/* <Projects_desc /> */}
             <Projects />
           </Suspense>
         </section>
@@ -110,7 +114,7 @@ function App() {
           </Suspense>
         </section> */}
         <footer className="w-full">
-          <Suspense fallback={<Loader />}>
+          <Suspense>
             <Footer />
           </Suspense>
         </footer>

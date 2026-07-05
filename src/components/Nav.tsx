@@ -4,7 +4,7 @@ import { LuLogs } from 'react-icons/lu'
 import { IoPerson } from 'react-icons/io5'
 import { GoProjectSymlink } from 'react-icons/go'
 import { createThemeContext } from '@/Context/context'
-import { scrolltoView } from '@/utils/utils'
+import { scrollToSection } from '@/utils/utils'
 
 const Nav = () => {
   const { LightTheme, setTheme, InView } = createThemeContext()
@@ -20,7 +20,7 @@ const Nav = () => {
 
   return (
     <div
-      className={`sticky top-3 z-50 w-full max-h-20 backdrop-blur-md p-2 rounded-md ${LightTheme ? 'bg-blue-500/15' : 'bg-gray-200/10'} transition-bg duration-300 ease-in-out`}
+      className={`sticky top-3 xl:mx-119.5 mx-4 z-50 max-h-20 backdrop-blur-md p-2 rounded-md ${LightTheme ? 'bg-blue-500/15' : 'bg-gray-200/10'} transition-bg duration-300 ease-in-out`}
     >
       <div className="flex justify-between items-center mx-2">
         <h1
@@ -30,7 +30,9 @@ const Nav = () => {
             to="/"
             className={`${!InView && 'opacity-100 cursor-pointer'} opacity-0 cursor-default transition-opacity duration-600 ease-in-out`}
           >
-            <span className='font-light'>&lt;<span className='font-bold'>N</span> /&gt;</span>
+            <span className="font-light">
+              &lt;<span className="font-bold">N</span> /&gt;
+            </span>
           </Link>
         </h1>
         <div
@@ -39,7 +41,7 @@ const Nav = () => {
           {navlist.map((i, index) => (
             <span
               key={index}
-              onClick={() => scrolltoView(i.id)}
+              onClick={() => scrollToSection(i.id)}
               className="hover:scale-110 cursor-pointer relative group"
               title={i.id}
             >

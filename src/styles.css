@@ -9,32 +9,44 @@ body {
   /* font-family:"Google Sans Flex", */
   /* font-family:"Roboto Condensed", */
   /* font-family:"Arimo", */
-  font-family:"Arimo",
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    'Arimo',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* for calling card */
 
-@font-face{
+@font-face {
   font-family: 'Earwig Factory';
-  src:url('/fonts/earwig factory rg.otf') format('truetype');
+  src: url('/fonts/earwig factory rg.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 .P5titlefont {
-  font-family: "Earwig Factory", sans-serif;
+  font-family: 'Earwig Factory', sans-serif;
 }
 
-.scroll_bar_::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 3px;
+  background-color: gray;
 }
-.scroll_bar_thumb::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
   width: 5px;
-  background-color: rgb(134, 133, 133);
+  background-color: rgb(85, 85, 85);
   border-radius: 5px;
 }
 code {
@@ -60,6 +72,7 @@ code {
   background: rgb(45, 153, 241);
 }
 
+/* IDK what this media query be doing and why I added them*/
 @media (width > 2200px) {
   .shrinked {
     margin-left: 15%;

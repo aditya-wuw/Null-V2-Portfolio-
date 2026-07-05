@@ -39,12 +39,13 @@ const Projects = React.memo(() => {
 
   return (
     <div
+      id="Projects"
       className={`select-none  ${LightTheme ? 'bg-linear-to-l from-neutral-500 text-black ' : 'bg-linear-to-r from-neutral-500 text-white'}`}
     >
       <div className={`p-3 ${LightTheme ? 'bg-white' : 'bg-black text-white'}`}>
         <div>
           <div className="flex justify-between w-full mx-1 px-2">
-            <h1 className="font-bold text-xl"></h1>
+            <h1 className="font-bold text-xl">{projectsData.title}</h1>
             <button
               className={`${disabled && 'hidden'} scale-115 cursor-pointer hover:scale-120 transition-scale duration-200 ease-in-out`}
               onClick={handleClick}
@@ -76,16 +77,18 @@ const Projects = React.memo(() => {
                   className="h-full"
                   aria-disabled={item.links[0]?.url === 'none'}
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    className="object-cover object-center cursor-pointer hover:scale-105 scale-100 transition duration-300 ease-in-out w-full h-full"
-                  />
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="object-cover object-center cursor-pointer hover:scale-105 scale-100 transition duration-300 ease-in-out w-full h-full"
+                    />
+                  )}
                 </a>
               </div>
               <div
-                className="p-3 select-none cursor-pointer "
+                className="p-3 select-none cursor-pointer md:text-[13px] text-[10px]"
                 onClick={() => Navigate(item.Link)}
                 title={'view details ' + item.title}
               >
@@ -97,17 +100,15 @@ const Projects = React.memo(() => {
                     </span>
                   )}
                 </h1>
-                <h1 className="md:text-[13px] text-[10px]">
-                  {item.description}
-                </h1>
+                <span>{item.description}</span>
                 {!islist && !disabled && (
-                  <motion.div
+                  <motion.span
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
                   >
                     {item.additional_dec}
-                  </motion.div>
+                  </motion.span>
                 )}
               </div>
               <div className="px-3 mt-3 flex gap-2 items-center justify-between mr-1 absolute w-full bottom-3 z-10">
@@ -119,7 +120,7 @@ const Projects = React.memo(() => {
                           key={lindex}
                           to={l.url}
                           target="_blank"
-                          className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-xs md:text-sm text-white'}`}
+                          className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-xs text-white'}`}
                         >
                           {l.label}
                         </Link>
