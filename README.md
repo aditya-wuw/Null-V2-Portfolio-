@@ -2,7 +2,7 @@
 
 `live on : https://adi.smgcat.site/`<br>(**\_0\_\_\_\_**0\_\_\_)<br>
 Welcome to **Null V2 Portfolio**!
-This project is a modern and customizable portfolio template designed to showcase your work, skills, and contact information effectively.
+This project is a modern and customizable portfolio designed to showcase my work, skills, and contact information effectively.
 
 ## Features
 
@@ -14,11 +14,7 @@ This project is a modern and customizable portfolio template designed to showcas
 
 ## License
 
-This project is open-source under the [MIT License](LICENSE).
-
-## Credits
-
-Designed and developed by [aditya-wuw](https://github.com/aditya-wuw).
+[MIT License](LICENSE).
 
 ---
 

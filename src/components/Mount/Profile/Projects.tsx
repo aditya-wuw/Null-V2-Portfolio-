@@ -17,8 +17,11 @@ const Projects = React.memo(() => {
   const [duration, setduration] = useState(0)
 
   const check_WindowSize = () => {
-    setislist(window.innerWidth > 1024)
-    setdisabled(window.innerWidth < 1280)
+    const isTabletOrDesktop = window.innerWidth > 1024
+    setislist(isTabletOrDesktop)
+    setdisabled(!isTabletOrDesktop)
+    console.log(islist)
+    console.log(disabled)
     if (disabled) {
       setduration(1)
     }

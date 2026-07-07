@@ -19,47 +19,47 @@ const Nav = () => {
   }
 
   return (
-    <div
-      className={`sticky top-3 xl:mx-119.5 mx-4 z-50 max-h-20 backdrop-blur-md p-2 rounded-md ${LightTheme ? 'bg-blue-500/15' : 'bg-gray-200/10'} transition-bg duration-300 ease-in-out`}
-    >
-      <div className="flex justify-between items-center mx-2">
-        <h1
-          className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
-        >
-          <Link
-            to="/"
-            className={`${!InView && 'opacity-100 cursor-pointer'} opacity-0 cursor-default transition-opacity duration-600 ease-in-out`}
-          >
-            <span className="font-extralight font-mono leading-relaxed">
-              &lt;<span>A</span>/&gt;
-            </span>
-          </Link>
-        </h1>
         <div
-          className={`${LightTheme ? 'text-black' : 'text-white'} flex items-center gap-3`}
+          className={`sticky max-xl:mx-4 top-2 left-2/8 z-50 max-h-20 backdrop-blur-md p-2 rounded-md ${LightTheme ? 'bg-blue-500/15' : 'bg-gray-200/10'} transition-bg duration-300 ease-in-out max-w-[1400px] 2xl:max-w-[50vw]`}
         >
-          {navlist.map((i, index) => (
-            <span
-              key={index}
-              onClick={() => scrollToSection(i.id)}
-              className="hover:scale-110 cursor-pointer relative group"
-              title={i.id}
+          <div className="flex justify-between items-center mx-2">
+            <h1
+              className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
             >
-              {i.logo}
-            </span>
-          ))}
-          <button
-            aria-label="L/D mode"
-            onClick={Themeing}
-            className={`p-2 hover:bg-blue-500/20 transition-all ease-in-out rounded-sm cursor-pointer`}
-          >
-            <MdLightMode
-              className={`scale-110 ${LightTheme ? 'text-blue-500' : 'text-white'} transtion duration-300 ease-in-out`}
-            />
-          </button>
+              <Link
+                to="/"
+                className={`${!InView && 'opacity-100 cursor-pointer'} opacity-0 cursor-default transition-opacity duration-600 ease-in-out`}
+              >
+                <span className="font-extralight font-mono leading-relaxed">
+                  &lt;<span>A</span>/&gt;
+                </span>
+              </Link>
+            </h1>
+            <div
+              className={`${LightTheme ? 'text-black' : 'text-white'} flex items-center gap-3`}
+            >
+              {navlist.map((i, index) => (
+                <span
+                  key={index}
+                  onClick={() => scrollToSection(i.id)}
+                  className="hover:scale-110 cursor-pointer relative group"
+                  title={i.id}
+                >
+                  {i.logo}
+                </span>
+              ))}
+              <button
+                aria-label="L/D mode"
+                onClick={Themeing}
+                className={`p-2 hover:bg-blue-500/20 transition-all ease-in-out rounded-sm cursor-pointer`}
+              >
+                <MdLightMode
+                  className={`scale-110 ${LightTheme ? 'text-blue-500' : 'text-white'} transtion duration-300 ease-in-out`}
+                />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   )
 }
 

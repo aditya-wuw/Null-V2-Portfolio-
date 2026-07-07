@@ -37,7 +37,7 @@ function App() {
       <div className={`flex flex-col gap-2 wrap-break-word`}>
         <section>
           <div
-            className={`mt-17 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
+            className={`xl:mt-15 mt-5 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
           >
             <Suspense
               fallback={
