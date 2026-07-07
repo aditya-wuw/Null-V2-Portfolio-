@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { MdLightMode } from 'react-icons/md'
-import { LuLogs } from 'react-icons/lu'
+// import { LuLogs } from 'react-icons/lu'
 import { IoPerson } from 'react-icons/io5'
 import { GoProjectSymlink } from 'react-icons/go'
 import { createThemeContext } from '@/Context/context'
@@ -11,7 +11,7 @@ const Nav = () => {
   const navlist = [
     { id: 'About', logo: <IoPerson size={15} /> },
     { id: 'Projects', logo: <GoProjectSymlink size={15} /> },
-    { id: 'blogs', logo: <LuLogs size={15} /> },
+    // { id: 'blogs', logo: <LuLogs size={15} /> },
   ]
   function Themeing() {
     localStorage.setItem('theme', !LightTheme ? 'Light' : 'dark')
@@ -24,7 +24,7 @@ const Nav = () => {
     >
       <div className="flex justify-between items-center mx-2">
         <h1
-          className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
+        className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
         >
           <Link
             to="/"

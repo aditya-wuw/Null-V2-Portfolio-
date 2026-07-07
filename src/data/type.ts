@@ -55,6 +55,23 @@ export interface ProjectLink {
     url: string;
 }
 
+export interface ProjectsData {
+    title: string;
+    items: Array<ProjectItem>;
+}
+
+export interface TextContentData {
+    title: string;
+    content: string;
+    by: string;
+}
+
+export interface ProjectDetailsType {
+    Desc: string
+    ProjectIdea: string
+    HowItWorks: string
+}
+
 export interface ProjectItem {
     title: string;
     Link: string;
@@ -66,19 +83,8 @@ export interface ProjectItem {
     description: string;
     additional_dec?: string | null;
     Update?: string;
-    dedicated_dec?: JSX.Element;
+    dedicated_dec: ProjectDetailsType;
     image: string | null;
     tags: Array<string | JSX.Element>;
     links: Array<ProjectLink>;
-}
-
-export interface ProjectsData {
-    title: string;
-    items: Array<ProjectItem>;
-}
-
-export interface TextContentData {
-    title: string;
-    content: string;
-    by: string;
 }

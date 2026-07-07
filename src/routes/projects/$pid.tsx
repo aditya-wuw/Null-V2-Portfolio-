@@ -5,6 +5,7 @@ import { MdArrowBackIos } from 'react-icons/md'
 import { GrUpdate } from 'react-icons/gr'
 import { projectsData } from '@/data/data'
 import { createThemeContext } from '@/Context/context'
+import ProjectPageDetails from '@/components/Mount/ProjectPageDetails'
 
 export const Route = createFileRoute('/projects/$pid')({
   component: RouteComponent,
@@ -39,16 +40,17 @@ function RouteComponent() {
               <h1 className="text-2xl max-lg:text-xl font-bold">
                 {item.title}
               </h1>
-              <div className="h-55 max-[482px]:h-35 w-full overflow-hidden rounded-2xl relative">
-                {item.image && (
+              {item.image && !item.DemoVideo && (
+                <div className="h-55 max-[482px]:h-35 w-full overflow-hidden rounded-2xl relative">
                   <img
+                    draggable={false}
                     src={item.image}
                     width={2000}
                     height={1000}
                     className="object-cover absolute 2xl:-top-45 xl:-top-15"
                   />
-                )}
-              </div>
+                </div>
+              )}
               {item.DemoVideo && (
                 <div>
                   <video
@@ -56,14 +58,23 @@ function RouteComponent() {
                     width={1920}
                     height={1080}
                     className="rounded-md"
+                    controlsList="nodownload"
                     autoPlay
+                    loop
                     muted
+                    // controls
                   >
                     your browser is not supported :(
                   </video>
                 </div>
               )}
-              <p className="text-md max-lg:text-sm">{item.dedicated_dec}</p>
+              <p className="text-md max-lg:text-sm">
+                <ProjectPageDetails
+                  Desc={item.dedicated_dec.Desc}
+                  ProjectIdea={item.dedicated_dec.ProjectIdea}
+                  HowItWorks={item.dedicated_dec.HowItWorks}
+                />
+              </p>
               {item.Update && (
                 <div className="px-5">
                   <h1 className="flex items-center gap-2 mb-2 text-xl font-bold">

@@ -1,6 +1,13 @@
 [
   {
-    "Title": "Try Again - Original by Nullfacedev",
+    "Title": "Outer layer of Space - Adi",
+    "music_src": "https://ik.imagekit.io/3sfckuehxk/music%20/Outer%20Space.mp3",
+    "banner": "https://ik.imagekit.io/3sfckuehxk/music%20/felix-mittermeier-milky-way-2695569.jpg",
+    "isplaying": false,
+    "bg": "black"
+  },
+  {
+    "Title": "Try Again - Adi",
     "music_src": "Musics/Try Again - Original.wav",
     "banner": "/Images_Optimized/Cover/02.jpg",
     "isplaying": false,
@@ -42,5 +49,4 @@
     "isplaying": false,
     "bg": "blue"
   }
-
 ]
