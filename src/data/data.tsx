@@ -9,57 +9,68 @@ import {
 import {
   SiAdobephotoshop,
   SiMongodb,
-  SiPaloaltonetworks,
   SiRadixui,
   SiReacthookform,
+  SiSap,
   SiSupabase,
   SiTauri,
   SiTypescript,
   SiZod,
 } from 'react-icons/si'
-import { PiFileSql, PiProjectorScreenFill } from 'react-icons/pi'
-import { GrGithub } from 'react-icons/gr'
+import { PiFileSql } from 'react-icons/pi'
+// import { GrGithub } from 'react-icons/gr'
 import { DiLinux, DiReact } from 'react-icons/di'
-import { assets } from '../Assets/assets'
+// import { CgVercel } from 'react-icons/cg'
+import { IoLogoVercel } from 'react-icons/io5'
+import { BiLogoPostgresql } from 'react-icons/bi'
+import { assets, demos } from '../Assets/assets'
+import type {
+  ContactData,
+  DetailsData,
+  HeroData,
+  NavLink,
+  ProjectsData,
+  SkillsData,
+  TextContentData,
+} from './type'
 
-export const navLinks = [
+export const navLinks: Array<NavLink> = [
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ]
 
-export const heroData = {
+export const heroData: HeroData = {
   name: 'Aditya Mandal',
   role: 'aka @Adi',
   about_ln1: (
     <p>
-      <span className="font-bold">Full Stack Developer</span> and a college
-      student based in <strong>West Bengal, India</strong>.
+      <span className="font-bold">Full Stack Developer</span> based in{' '}
+      <strong>West Bengal, India</strong>. Specializing in Next.js, React,
+      TypeScript.
     </p>
   ),
   about_ln2: (
     <span>
-      I'm a self-taught developer usually creating apps or sites leveraging Web
-      Tech and simplicity in mind
+      I'm a self-taught developer usually creating apps or sites leveraging web
+      tech with simplicity in mind.
     </span>
   ),
   about_ln3:
-    'I also occasionally draw 2D, create manga that I plan to publish soon, do Game Developement from time to time',
+    'I also occasionally draw 2D art, create music and do game development from time to time.',
 }
 
-export const contactData = {
+export const contactData: ContactData = {
   title: 'Contact Info',
   message:
     "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
   email: 'nullfaceddevbusiness@gmail.com',
   gh: 'https://github.com/aditya-wuw',
   linkedIN: 'https://www.linkedin.com/in/aditya-mandal-a30347294',
-  // CV: assets.CV,
 }
 
-export const details = {
+export const details: DetailsData = {
   employment: '',
-
   certification: [
     {
       label: 'Web Dev',
@@ -77,7 +88,8 @@ export const details = {
 }
 
 const icon_size = 'w-5 h-5 md:w-7 md:h-7'
-export const skillsData = {
+
+export const skillsData: SkillsData = {
   title: 'Skills',
   items: [
     { Name: 'Next.js', Comp: <RiNextjsFill className={icon_size} /> },
@@ -95,6 +107,15 @@ export const skillsData = {
       Name: 'Tailwind CSS',
       Comp: <RiTailwindCssFill className={icon_size} />,
       color: 'group-hover:text-blue-400',
+    },
+    {
+      Name: 'GSAP',
+      Comp: <SiSap className={icon_size} />,
+      color: 'group-hover:text-blue-400',
+    },
+    {
+      Name: 'Vercel',
+      Comp: <IoLogoVercel className={icon_size} />,
     },
     {
       Name: 'Supabase',
@@ -138,7 +159,7 @@ export const skillsData = {
     },
     { Name: 'Figma', Comp: <FaFigma className={icon_size} /> },
     {
-      Name: 'Adobe Photoshop',
+      Name: 'Affinity',
       Comp: <SiAdobephotoshop className={icon_size} />,
       color: 'group-hover:text-blue-800',
     },
@@ -160,176 +181,180 @@ export const skillsData = {
     { Name: 'Video Editing', Comp: <RiVideoOnAiFill className={icon_size} /> },
   ],
 }
-export const OngoingProjects = [
-  {
-    title: "Smug Cat's Den",
-    Link: 'smugcat',
-    started: '2nd Feb 2026',
-    ended: 'Today',
-    // required
-    contributers: [
-      {
-        label: 'aditya',
-        profileUrl: '/Images_Optimized/Profile/logo_new.png',
-        link: 'https://github.com/aditya-wuw',
-      },
-    ],
-    description:
-      'This is the online brand alias I maintain to release my open source apps or products, my vision for this is very ambitious but currently narrowing it down to something more achievable and maintainable. Name came from a motivation of some self centered cats building somthing cool ha ha',
-    additional_dec: null,
-    image: null,
-    tags: ['brand', 'alias'],
-    links: [
-      // {
-      //   label: 'Repo',
-      //   url: 'https://github.com/Smug-Cat-s-Den',
-      // },
-      {
-        label: 'Learn more',
-        url: 'https://home.smgcat.site/',
-      },
-    ],
-  },
-  {
-    title: 'Copy Chan',
-    Link: 'Copy_History',
-    started: '1st Dec',
-    ended: '23th Dec 2025',
-    // required
-    contributers: [
-      {
-        label: 'aditya',
-        profileUrl: '/Images_Optimized/Profile/logo_new.png',
-        link: 'https://github.com/aditya-wuw',
-      },
-    ],
-    description:
-      'I needed a windows like Clipboard manager as I switched to Linux so I made my own Clipboard Manager, Copy Chan is a cross-platform desktop clipboard/history manager with a Emoji and symbols picker, built with Tauri (Rust) and React + Vite. Primarily made and optimized for linux.',
-    additional_dec: null,
-    image: null,
-    tags: [
-      <DiReact size={18} />,
-      <FaRust size={18} />,
-      <SiTauri size={18} />,
-      <RiTailwindCssFill size={18} />,
-      'solo',
-    ],
-    links: [
-      {
-        label: 'Repo',
-        url: 'https://github.com/Smug-Cat-s-Den/CopyHistoryLinux',
-      },
-    ],
-  },
-  {
-    title: 'Music Player Component',
-    Link: 'Player',
-    started: '1st Feb',
-    ended: '8th Feb 2025',
-    // required
-    contributers: [
-      {
-        label: 'aditya',
-        profileUrl: '/Images_Optimized/Profile/logo_new.png',
-        link: 'https://github.com/aditya-wuw',
-      },
-    ],
-    description:
-      'Fully hand- coded the logic of the displayed music player right next to the skills tab, initially used to showcase my favorite music, but I removed them due to copyright issues. I was also learning to produce music since the start of 2026, so the music player may showcase some of my own created music in the future',
-    additional_dec: null,
-    image: null,
-    tags: [<DiReact size={18} />, <RiTailwindCssFill size={18} />],
-    links: [
-      {
-        label: 'Repo',
-        url: 'https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx',
-      },
-    ],
-  },
-  {
-    title: 'Koneko AI',
-    Link: 'Mogger_AI',
-    status: '',
-    started: '20th dec 2025',
-    ended: '10th jan 2026',
-    contributers: [
-      {
-        label: 'aditya',
-        profileUrl: '/Images_Optimized/Profile/logo_new.png',
-        link: 'https://github.com/aditya-wuw',
-      },
-    ],
-    description:
-      'AI-powered web app that generates personalized mock tests and notes to help students prepare effectively for exams and studying.send a prompt and start preparing as it creates a virtual mock test simulation for you.',
-    image: null,
-    tags: [
-      'NEXT',
-      <RiTailwindCssFill size={18} />,
-      <SiSupabase className="h-4 w-4" />,
-      'Solo',
-    ],
-    links: [
-      {
-        label: 'Demo',
-        url: 'https://mogger-mog-your-exams.vercel.app/',
-      },
-    ],
-  },
-]
 
-export const projectsData = {
-  title: 'Projects',
+export const projectsData: ProjectsData = {
+  title: 'Featured',
   items: [
+    {
+      title: 'Copy Chan',
+      Link: 'Copy_History',
+      started: '1st Dec',
+      ended: '23rd Dec 2025',
+      DemoVideo: demos.copychandemo,
+      Update:
+        "I'm improving my Rust skills and working through the current usage report to fix all outstanding issues. I'll be polishing the project for a full release soon—star the repo to stay updated!",
+      contributors: [
+        {
+          label: 'aditya',
+          profileUrl: '/Images_Optimized/Profile/logo_new.png',
+          link: 'https://github.com/aditya-wuw',
+        },
+      ],
+      description:
+        'I needed a Windows-like clipboard manager as I switched to Linux, so I made my own setup.',
+      additional_dec:
+        'Copy Chan is a cross-platform desktop clipboard/history manager with an emoji and symbols picker, built with Tauri (Rust) and React + Vite. Primarily made and optimized for Linux.',
+      dedicated_dec: {
+        Desc: 'A lightning-fast native desktop utility built to bridge the gap between Windows and Linux clipboard histories.',
+        ProjectIdea:
+          'Frustrated by the lack of smooth, native clipboard managers when transitioning layout OS workspaces to Linux, I decided to build an lightweight asset with an accessible emoji dashboard.',
+        HowItWorks:
+          'Using Tauri and Rust, the app spawns a global system listener thread that intercepts system clipboard changes, stores them in an efficient local layout, and displays them via a lightweight React frontend.',
+      },
+      image: assets.copychan,
+      tags: [
+        <DiReact size={18} key="react" />,
+        <FaRust size={18} key="rust" />,
+        <SiTauri size={18} key="tauri" />,
+        <RiTailwindCssFill size={18} key="tw" />,
+        'solo',
+      ],
+      links: [
+        {
+          label: 'Repo',
+          url: 'https://github.com/Smug-Cat-s-Den/Copy-Chan',
+        },
+      ],
+    },
+    {
+      title: 'Koneko AI',
+      Link: 'Mogger_AI',
+      status: '',
+      started: '20th Dec 2025',
+      ended: '10th Jan 2026',
+      DemoVideo: demos.Koneko,
+      contributors: [
+        {
+          label: 'aditya',
+          profileUrl: '/Images_Optimized/Profile/logo_new.png',
+          link: 'https://github.com/aditya-wuw',
+        },
+      ],
+      description:
+        'AI-powered web app that generates personalized mock tests and notes to help students prepare effectively for exams.',
+      additional_dec:
+        'Send a prompt and start preparing as it creates a virtual mock test simulation for you.',
+      dedicated_dec: {
+        Desc: 'An intelligent automated education suite designed to transform unstructured textbooks into mock testing engines.',
+        ProjectIdea:
+          'Traditional studying methods feel passive. Koneko AI aims to turn study materials into dynamic testing sandboxes to boost active memory recall.',
+        HowItWorks:
+          'Users pass their course subjects or notes, which are parsed and sent to an AI orchestration layer. The application then streams structural multi-choice questions back and structures mock analytics with Supabase handling progress data.',
+      },
+      image: assets.Kokeno,
+      tags: [
+        'NEXT',
+        <RiTailwindCssFill size={18} key="tw" />,
+        <SiSupabase className="h-4 w-4" key="sb" />,
+        'Solo',
+      ],
+      links: [
+        {
+          label: 'Demo',
+          url: 'https://mogger-mog-your-exams.vercel.app/',
+        },
+      ],
+    },
+    {
+      title: "Smug Cat's Den",
+      Link: 'smugcat',
+      started: '2nd Feb 2026',
+      ended: 'Today',
+      contributors: [
+        {
+          label: 'aditya',
+          profileUrl: '/Images_Optimized/Profile/logo_new.png',
+          link: 'https://github.com/aditya-wuw',
+        },
+      ],
+      description:
+        'This is the online brand alias I maintain to release my open-source apps or products. The name comes from a motivation of some self-centered cats building something cool, haha.',
+      additional_dec:
+        'My vision is very ambitious, but I am currently narrowing it down to something more achievable.',
+      dedicated_dec: {
+        Desc: "Smug Cat's Den serves as my digital umbrella studio and playground for personal open-source projects, tools, and branding experiments.",
+        ProjectIdea:
+          'The concept stems from creating a distinct developer persona—something memorable, playful, and completely unhinged like cats building code—to host production-ready apps.',
+        HowItWorks:
+          'It handles multi-project routing and deployment configurations across specific subdomains while serving as the primary hub for my software releases.',
+      },
+      image: assets.smgcat,
+      tags: ['brand', 'alias'],
+      links: [
+        {
+          label: 'View',
+          url: 'https://home.smgcat.site/',
+        },
+      ],
+    },
+    {
+      title: 'Music Player Component',
+      Link: 'Player',
+      started: '1st Feb',
+      ended: '8th Feb 2025',
+      contributors: [
+        {
+          label: 'aditya',
+          profileUrl: '/Images_Optimized/Profile/logo_new.png',
+          link: 'https://github.com/aditya-wuw',
+        },
+      ],
+      description:
+        'Fully hand-coded the logic of the displayed music player right next to the skills tab.',
+      additional_dec:
+        'Initially used to showcase my favorite music, but I removed them due to copyright issues. I have also been learning to produce music since the start of 2026, so the music player may showcase some of my own tracks in the future.',
+      dedicated_dec: {
+        Desc: 'A custom-built, highly interactive custom web audio layout built natively within a portfolio context.',
+        ProjectIdea:
+          'Instead of relying on clunky third-party iframe embed codes that degrade site load speeds, I hand-coded an interactive HTML5 audio engine node.',
+        HowItWorks:
+          'Utilizes React state hooks tied to DOM audio nodes to handle play status, track queuing, duration calculation, and seamless timeline scrubbing.',
+      },
+      image: assets.msplayer,
+      tags: [
+        <DiReact size={18} key="react" />,
+        <RiTailwindCssFill size={18} key="tw" />,
+      ],
+      links: [
+        {
+          label: 'Repo',
+          url: 'https://github.com/aditya-wuw/Null-V2-Portfolio-/blob/master/src/components/Mount/Profile/MusicEmbed.tsx',
+        },
+      ],
+    },
     {
       title: 'FireShip Discord bot',
       Link: 'FireShip_Discord_bot',
       description:
-        'FireShip bot is a Discord bot designed to keep users up to date with the latest videos',
+        'FireShip bot is a Discord bot designed to keep users up to date with the latest videos.',
       additional_dec:
-        'Fire ship is the goat and no one can deny that. So, I made this bot to get up to date with the channel',
-      dedicated_dec: (
-        <p>
-          <b className="text-lg">FireShipBot</b> is an automation tool built to
-          fetch the latest videos from the Fireship YouTube channel and send
-          instant updates to a Discord server. Instead of manually checking
-          YouTube, this bot makes sure the community never misses a new upload.
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <PiProjectorScreenFill />
-              Project idea
-            </h1>
-            <p className="text-lg">
-              As a fan of Fireship’s short, fast-paced tech videos, I often
-              wanted a quick way to know when a new one was out. So I created
-              FireShipBot, a cron job–powered bot that automatically checks for
-              new uploads and pushes them into Discord without needing YouTube
-              notifications.
-            </p>
-          </section>
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <SiPaloaltonetworks />
-              How it works
-            </h1>
-            <p className="text-lg">
-              The bot runs on a 24-hour cron schedule. It calls the YouTube Data
-              API to check for the latest Fireship video, compares it with the
-              last stored entry, and if there’s a new upload, sends an embedded
-              message to a Discord server via a webhook. This way, the whole
-              server stays updated automatically.
-            </p>
-          </section>
-        </p>
-      ),
+        'Fireship is awesome, so I made this bot to stay instantly updated with channel uploads.',
+      dedicated_dec: {
+        Desc: 'FireShipBot is an automation tool built to fetch the latest videos from the Fireship YouTube channel and send instant updates to a Discord server.',
+        ProjectIdea:
+          'As a fan of Fireship’s short, fast-paced tech videos, I wanted a clean way to get notified when a new one dropped without cluttering my personal YouTube subscription feeds.',
+        HowItWorks:
+          'The bot runs on a 24-hour cron schedule built on Node.js. It hits the YouTube Data API to check for new video keys, compares them with the last cached entry, and automatically broadcasts embedded updates to configured webhooks.',
+      },
       image: assets.Fireship,
-      tags: [<FaNodeJs size={18} />, 'Express', 'YTV3'],
+      tags: [<FaNodeJs size={18} key="node" />, 'Express', 'YTV3'],
       links: [
         {
           label: 'none',
           url: 'none',
         },
         {
-          label: <GrGithub className="w-6 h-6" />,
+          label: 'Repo',
           url: 'https://github.com/aditya-wuw/FireShipBot',
         },
       ],
@@ -339,69 +364,42 @@ export const projectsData = {
       Link: 'HMS_dashboard',
       status: '',
       description:
-        'Was tasked to build a Admin Hospital Management System Dashboard, it is a full stack demo',
-      additional_dec: 'yeah average Dev ah project what else I can say',
-      dedicated_dec: (
-        <p>
-          <b className="text-lg">HMS Dashboard</b> is a healthcare management
-          system built during an online hackathon. It was designed to provide an
-          all-in-one interface for patient records, doctor scheduling, and
-          hospital analytics in a clean, user-friendly dashboard.
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <PiProjectorScreenFill />
-              Project idea
-            </h1>
-            <p className="text-lg">
-              The idea came during a hackathon where we had to solve a
-              real-world problem in healthcare. We realized hospitals often face
-              trouble in organizing patient data and schedules, so we aimed to
-              design a dashboard that simplifies hospital workflows with modern
-              UI/UX.
-            </p>
-          </section>
-          <section className="mx-5">
-            <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
-              <SiPaloaltonetworks />
-              How it works
-            </h1>
-            <p className="text-lg">
-              The HMS Dashboard integrates patient registration, appointment
-              booking, doctor availability, and hospital statistics in one
-              platform. It was built using React and backend APIs, focusing on
-              speed and clarity. Doctors and admins can log in, manage data, and
-              track insights all from one dashboard.
-            </p>
-            <p className="text-md italic">
-              (prototype built in 24 hours for the hackathon)
-            </p>
-          </section>
-        </p>
-      ),
+        'Tasked with building an Admin Hospital Management System Dashboard. This is a full-stack project demo.',
+      additional_dec:
+        'A robust full-stack dashboard built during a hackathon challenge.',
+      DemoVideo: demos.HMSdemo,
+      dedicated_dec: {
+        Desc: 'HMS Dashboard is a full-stack healthcare platform engineered to handle core operations including analytical tracking and patient registration workflows.',
+        ProjectIdea:
+          'Conceived during a rapid hackathon timeframe, this system addresses workflow congestion in clinics by digitizing tracking protocols.',
+        HowItWorks:
+          'The UI maps relational operational queues through React components. Database logic coordinates secure CRUD updates handling doctor profiles, calendar bookings, and analytical summaries.',
+      },
+      Update:
+        'I recently migrated the database to SQL from Mongo as I no longer use it',
       image: assets.screenshot5,
       tags: [
-        <RiReactjsFill size={18} />,
+        <RiReactjsFill size={18} key="react" />,
         'Express',
-        <span className="flex items-center gap-1">
-          <SiMongodb size={18} />
-          <h1>MongoDB</h1>
+        <span className="flex items-center gap-1" key="mongo">
+          <BiLogoPostgresql size={18} />
+          <h1>Neon</h1>
         </span>,
       ],
       links: [
         {
           label: 'Demo',
-          url: 'https://hms-dashbord-1.onrender.com/',
+          url: 'https://hms-dashboard-1.onrender.com/',
         },
         {
-          label: <GrGithub className="w-6 h-6" />,
+          label: 'Repo',
           url: 'https://github.com/aditya-wuw/HMS-Dashbord',
         },
       ],
     },
   ],
 }
-
-export const TextContent = {
+export const TextContent: TextContentData = {
   title: 'Thank you for Visiting',
   content: ':3',
   by: 'Null faced dev',

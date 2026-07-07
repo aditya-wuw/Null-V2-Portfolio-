@@ -5,6 +5,18 @@ import minecraft_ from './Screenshot 2025.08.09 - 21.11.10.05.png'
 import vro from './vro.png'
 import ht from './callingcard/8973086.png'
 import ow from "./ow.png"
+import smgcat from "./smgcat.png"
+import copychan from "./copychan.png"
+import Kokeno from "./Koneko.png"
+import msplayer from "/Images_Optimized/Cover/05.jpg"
+
+// demo videos
+// import copychandemo from "./demos/Copychandemo.mp4"
+// import HMSdemo from "./demos/HmsDemo.mp4"
+// import Koneko from "./demos/KonekoDemo.mp4"
+const copychandemo = "https://ik.imagekit.io/3sfckuehxk/Video%20demos/Copychandemo.mp4?updatedAt=1783435652476"
+const Koneko = "https://ik.imagekit.io/3sfckuehxk/Video%20demos/KonekoDemo.mp4?updatedAt=1783435652657"
+const HMSdemo = "https://ik.imagekit.io/3sfckuehxk/Video%20demos/HmsDemo.mp4?updatedAt=1783435651229"
 
 export const assets = {
   screenshot5,
@@ -12,5 +24,12 @@ export const assets = {
   minecraft_,
   vro,
   ht,
-  ow
-}
+  ow,
+  smgcat,
+  copychan, Kokeno, msplayer
+} as const
+
+
+export const demos = {
+  copychandemo, HMSdemo, Koneko
+} as const 

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
 // Import the generated route tree
+import { preconnect } from 'react-dom'
 import { routeTree } from './routeTree.gen'
 
 import './styles.css'
@@ -27,6 +28,7 @@ declare module '@tanstack/react-router' {
   }
 }
 
+preconnect('https://ik.imagekit.io', { crossOrigin: 'anonymous' })
 // Render the app
 const rootElement = document.getElementById('app')
 if (rootElement && !rootElement.innerHTML) {

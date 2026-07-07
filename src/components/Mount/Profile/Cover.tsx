@@ -1,8 +1,10 @@
 import { motion, useInView } from 'motion/react'
 import React, { useEffect, useRef } from 'react'
 import { createThemeContext } from '@/Context/context'
-import video from '/Video_bg/_fuji_loop.mp4'
+// import video from '/Video_bg/_fuji_loop.mp4'
 
+const video =
+  'https://ik.imagekit.io/3sfckuehxk/_fuji_loop.mp4?updatedAt=1783435507739'
 const Cover = React.memo(() => {
   const { LightTheme, setisinView } = createThemeContext()
   const AMinView = useRef<HTMLDivElement | null>(null)
@@ -11,7 +13,6 @@ const Cover = React.memo(() => {
   useEffect(() => {
     setisinView(isInView)
   }, [isInView, videoref])
-
 
   return (
     <motion.div
@@ -35,7 +36,8 @@ const Cover = React.memo(() => {
           autoPlay
           loop
           playsInline
-          preload='auto'
+          rel="preload"
+          preload="auto"
         />
       </div>
     </motion.div>

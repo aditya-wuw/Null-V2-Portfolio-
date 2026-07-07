@@ -9,9 +9,12 @@ const Skills = React.memo(() => {
       className={`rounded-xl select-none relative z-20 ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} w-full h-full`}
     >
       <div className="absolute overflow-hidden w-full h-full p-3 group">
-        <h1 className="absolute text-[120px] font-extrabold mx-2 opacity-15 -right-5 -rotate-2 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out">
+        <span
+          aria-hidden={true}
+          className="absolute text-[120px] font-extrabold mx-2 opacity-15 -right-5 -rotate-2 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out"
+        >
           Skills
-        </h1>
+        </span>
       </div>
       <div className="flex flex-wrap gap-2 mx-2 p-3">
         {skillsData.items.map((item, i) => (
