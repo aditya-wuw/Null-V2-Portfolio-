@@ -221,15 +221,16 @@ const MusicEmbed = React.memo(() => {
                 />
               )}
             </button>
-            <label htmlFor="volume_range">
+            <label htmlFor="VolumeRange" className="w-full h-full">
+              <span className="sr-only">Volume</span>
               <input
-                id="volume_range"
+                id="VolumeRange"
                 type="range"
                 min={0}
                 max={100}
                 value={volume_Value}
                 onChange={(e) => setVolumeValue(Number(e.target.value))}
-                className={`appearance-none accent-white h-1 rounded-full outline-none cursor-pointer w-20 max-sm:w-17 ${ShowVolume ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-in-out`}
+                className={`appearance-none accent-white flex h-1 rounded-full outline-none cursor-pointer w-20 max-sm:w-17 ${ShowVolume ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-in-out`}
                 style={Volume_bar}
               />
             </label>
@@ -284,22 +285,23 @@ const MusicEmbed = React.memo(() => {
           </section>
           <section className="player_control w-full flex gap-3 px-2">
             <div className="seek_bar relative z-10 w-full translate-y-1 flex items-center">
-              <label htmlFor="timeline"></label>
-              <input
-                id="timeline"
-                type="range"
-                name="timeline"
-                value={Timeline}
-                onChange={(e) => handleseek(parseFloat(e.target.value))}
-                min={0}
-                max={100}
-                step={0.1}
-                onInput={() => setDraging(true)}
-                onMouseUp={() => setDraging(false)}
-                onTouchEnd={() => setDraging(false)}
-                className={`Seek_help w-[90%] appearance-none cursor-pointer accent-white hover:accent-gray-300 rounded-full ${isDraging ? 'h-2' : 'h-[3px]'} transition-h duration-200 ease-in-out`}
-                style={seek_bar}
-              />
+              <label htmlFor="timeline" className="w-full">
+                <input
+                  id="timeline"
+                  type="range"
+                  name="timeline"
+                  value={Timeline}
+                  onChange={(e) => handleseek(parseFloat(e.target.value))}
+                  min={0}
+                  max={100}
+                  step={0.1}
+                  onInput={() => setDraging(true)}
+                  onMouseUp={() => setDraging(false)}
+                  onTouchEnd={() => setDraging(false)}
+                  className={`Seek_help w-[90%] appearance-none cursor-pointer accent-white hover:accent-gray-300 rounded-full ${isDraging ? 'h-2' : 'h-[3px]'} transition-h duration-200 ease-in-out`}
+                  style={seek_bar}
+                />
+              </label>
             </div>
             <ul
               className={`flex gap-6 text-white items-center w-fit max-md:scale-90`}

@@ -27,10 +27,18 @@ const Details = React.memo(() => {
       </div>
       {/* <h1 className="text-xl font-bold mb-5">Details</h1> */}
       <section className="flex justify-center gap-2">
-        <a href={contactData.gh} target="_blank">
+        <a
+          href={contactData.gh}
+          target="_blank"
+          aria-label={`view ${contactData.gh}`}
+        >
           <FaGithub className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />
         </a>
-        <a href={contactData.linkedIN} target="_blank">
+        <a
+          href={contactData.linkedIN}
+          target="_blank"
+          aria-label={`view ${contactData.linkedIN}`}
+        >
           <FaLinkedin className="w-5 h-5 cursor-pointer hover:scale-115 scale-100 transition-scale duration-300 ease-in-out" />
         </a>
         {/* <a

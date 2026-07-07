@@ -29,11 +29,11 @@ function layOuts() {
       const smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
-        smooth: 1.2,
+        smooth: 1.1,
         effects: true,
-        normalizeScroll: true,
+        // normalizeScroll: true,
       })
-
+      ScrollTrigger.refresh()
       return () => {
         smoother.kill()
       }
@@ -50,14 +50,12 @@ function layOuts() {
   }
 
   return (
-    <div>
+    <div className={`${LightTheme ? 'bg-white' : 'bg-black'} inset-0 relative`}>
       <Nav />
       <div
         ref={ContainerRef}
         id="smooth-wrapper"
-        className={`${
-          LightTheme ? 'bg-white' : 'bg-black'
-        } transition-colors duration-300 ease-in-out w-full h-screen overflow-hidden`}
+        className={` transition-colors duration-300 ease-in-out w-full min-h-screen`}
       >
         <div
           id="smooth-content"
@@ -65,8 +63,8 @@ function layOuts() {
             LightTheme ? 'bg-white Grind-black' : 'bg-black Grind-white'
           }`}
         >
-          <div className="min-[4240px]:mx-115 min-[3840px]:mx-15 min-[1280px]:mx-30 mx-4 flex justify-center pt-px">
-            <div className="2xl:w-[50vw] max-[1024px]:w-[99vw] w-full">
+          <div className="flex flex-1 items-start justify-center mx-4 pt-px ">
+            <div className="max-w-[1400px] 2xl:max-w-[50vw]">
               <section>
                 <Outlet />
               </section>

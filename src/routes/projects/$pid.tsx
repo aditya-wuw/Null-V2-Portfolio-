@@ -20,7 +20,7 @@ function RouteComponent() {
   }, [])
 
   return (
-    <div className="mt-20">
+    <div className="mt-10">
       <Link to="/">
         <button
           className={`${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'} p-1 px-3 text-xl font-light rounded-xl mb-3 cursor-pointer`}
