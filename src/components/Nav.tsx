@@ -49,10 +49,10 @@ const Nav = () => {
             </span>
           ))}
           <button
+            aria-label="L/D mode"
             onClick={Themeing}
             className={`p-2 hover:bg-blue-500/20 transition-all ease-in-out rounded-sm cursor-pointer`}
           >
-            {' '}
             <MdLightMode
               className={`scale-110 ${LightTheme ? 'text-blue-500' : 'text-white'} transtion duration-300 ease-in-out`}
             />

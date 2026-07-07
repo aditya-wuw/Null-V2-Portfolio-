@@ -20,7 +20,7 @@ import {
 import { PiFileSql, PiProjectorScreenFill } from 'react-icons/pi'
 import { GrGithub } from 'react-icons/gr'
 import { DiLinux, DiReact } from 'react-icons/di'
-import { assets } from '../Assets/assets'
+import { assets, demos } from '../Assets/assets'
 import type {
   ContactData,
   DetailsData,
@@ -193,7 +193,7 @@ export const projectsData: ProjectsData = {
       tags: ['brand', 'alias'],
       links: [
         {
-          label: 'Learn more',
+          label: 'View',
           url: 'https://home.smgcat.site/',
         },
       ],
@@ -347,6 +347,7 @@ export const projectsData: ProjectsData = {
         'Tasked with building an Admin Hospital Management System Dashboard. This is a full-stack project demo.',
       additional_dec:
         'A robust full-stack dashboard built during a hackathon challenge.',
+      DemoVideo: demos.HMSdemo,
       dedicated_dec: (
         <div>
           <b className="text-lg">HMS Dashboard</b> is a healthcare management
@@ -384,6 +385,8 @@ export const projectsData: ProjectsData = {
           </section>
         </div>
       ),
+      Update:
+        'I recently migrated the database to SQL from Mongo as I no longer use it',
       image: assets.screenshot5,
       tags: [
         <RiReactjsFill size={18} />,

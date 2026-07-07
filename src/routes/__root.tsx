@@ -59,9 +59,6 @@ function layOuts() {
           LightTheme ? 'bg-white' : 'bg-black'
         } transition-colors duration-300 ease-in-out w-full h-screen overflow-hidden`}
       >
-        /* 4. CONTENT ELEMENT: Must be a clean block container. Do NOT add
-        h-screen or overflow properties here. We apply the grid background
-        classes here so it tiles indefinitely as you scroll down. */
         <div
           id="smooth-content"
           className={`w-full min-h-screen ${

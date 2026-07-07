@@ -18,9 +18,12 @@ const Details = React.memo(() => {
       className={`select-none rounded-sm h-[102%] p-3 relative overflow-hidden ${LightTheme ? 'bg-white text-black border border-black/30' : 'bg-black text-white border border-white/30'} bottom-3 relative`}
     >
       <div className="absolute w-full h-full group">
-        <h1 className="absolute text-[70px] font-extrabold mb-2 opacity-20 -bottom-7 right-0 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out">
+        <span
+          aria-hidden={true}
+          className="absolute text-[70px] font-extrabold mb-2 opacity-20 -bottom-7 right-0 xl:blur-[5px] xl:group-hover:blur-[2px] blur-[2px] duration-300 ease-in-out"
+        >
           Details
-        </h1>
+        </span>
       </div>
       {/* <h1 className="text-xl font-bold mb-5">Details</h1> */}
       <section className="flex justify-center gap-2">
@@ -85,6 +88,7 @@ const Details = React.memo(() => {
               target="_blank"
               key={i}
               className="relative group"
+              aria-label={`socials ${item.path}`}
             >
               <span>
                 <span

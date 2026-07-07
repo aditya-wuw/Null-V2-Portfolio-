@@ -1,6 +1,6 @@
 import { MdGridView } from 'react-icons/md'
 import { FaList } from 'react-icons/fa6'
-import { Link, useNavigate } from '@tanstack/react-router'
+import { useNavigate } from '@tanstack/react-router'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { createThemeContext } from '@/Context/context'
@@ -116,14 +116,14 @@ const Projects = React.memo(() => {
                   {item.links.map(
                     (l, lindex) =>
                       l.label !== 'none' && (
-                        <Link
+                        <a
                           key={lindex}
-                          to={l.url}
+                          href={l.url}
                           target="_blank"
                           className={`${typeof l.label === 'string' && 'bg-blue-600 px-2 py-1 rounded-md text-xs text-white'}`}
                         >
                           {l.label}
-                        </Link>
+                        </a>
                       ),
                   )}
                 </div>

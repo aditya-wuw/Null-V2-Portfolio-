@@ -163,12 +163,21 @@ const MusicEmbed = React.memo(() => {
 
   return (
     <div
-      className={`w-full h-full select-none relative rounded-2xl  ${MusicData[last].bg === 'red' ? 'bg-red-500' : 
-        MusicData[last].bg === 'black' ? 'bg-black':
-        MusicData[last].bg === 'cyan' ? 'bg-cyan-500':
-        MusicData[last].bg === 'green' ? 'bg-green-500':
-        MusicData[last].bg === 'DarkBlue' ? 'bg-blue-800':
-        MusicData[last].bg === 'pink' ? 'bg-pink-500' : 'bg-blue-500/80'} transition duration-200 ease-in-out`}
+      className={`w-full h-full select-none relative rounded-2xl  ${
+        MusicData[last].bg === 'red'
+          ? 'bg-red-500'
+          : MusicData[last].bg === 'black'
+            ? 'bg-black'
+            : MusicData[last].bg === 'cyan'
+              ? 'bg-cyan-500'
+              : MusicData[last].bg === 'green'
+                ? 'bg-green-500'
+                : MusicData[last].bg === 'DarkBlue'
+                  ? 'bg-blue-800'
+                  : MusicData[last].bg === 'pink'
+                    ? 'bg-pink-500'
+                    : 'bg-blue-500/80'
+      } transition duration-200 ease-in-out`}
     >
       <div className="w-full h-full p-2 overflow-hidden relative rounded-2xl">
         <motion.img
@@ -199,7 +208,11 @@ const MusicEmbed = React.memo(() => {
             onMouseEnter={() => setShowVolume(true)}
             onMouseLeave={() => setShowVolume(false)}
           >
-            <button className="volume" onClick={() => handleMute()}>
+            <button
+              aria-label="volume"
+              className="volume"
+              onClick={() => handleMute()}
+            >
               {ismute ? (
                 <PiSpeakerXFill className="xl:scale-160 max-xl:scale-120 hover:scale-170 transition duration-200 ease-in-out cursor-pointer text-white" />
               ) : (
@@ -208,15 +221,18 @@ const MusicEmbed = React.memo(() => {
                 />
               )}
             </button>
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={volume_Value}
-              onChange={(e) => setVolumeValue(Number(e.target.value))}
-              className={`appearance-none accent-white h-1 rounded-full outline-none cursor-pointer w-20 max-sm:w-17 ${ShowVolume ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-in-out`}
-              style={Volume_bar}
-            />
+            <label htmlFor="volume_range">
+              <input
+                id="volume_range"
+                type="range"
+                min={0}
+                max={100}
+                value={volume_Value}
+                onChange={(e) => setVolumeValue(Number(e.target.value))}
+                className={`appearance-none accent-white h-1 rounded-full outline-none cursor-pointer w-20 max-sm:w-17 ${ShowVolume ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200 ease-in-out`}
+                style={Volume_bar}
+              />
+            </label>
           </section>
           <section className="w-full flex justify-end mb-2">
             <div className="text-end text-white backdrop-blur-xs rounded-2xl xl:w-53 w-47">
@@ -268,7 +284,9 @@ const MusicEmbed = React.memo(() => {
           </section>
           <section className="player_control w-full flex gap-3 px-2">
             <div className="seek_bar relative z-10 w-full translate-y-1 flex items-center">
+              <label htmlFor="timeline"></label>
               <input
+                id="timeline"
                 type="range"
                 name="timeline"
                 value={Timeline}

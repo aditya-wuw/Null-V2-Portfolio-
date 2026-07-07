@@ -10,6 +10,12 @@ import copychan from "./copychan.png"
 import Kokeno from "./Koneko.png"
 import msplayer from "/Images_Optimized/Cover/05.jpg"
 
+// demo videos
+import copychandemo from "./demos/Copychandemo.mp4"
+import HMSdemo from "./demos/HmsDemo.mp4"
+import Koneko from "./demos/KonekoDemo.mp4"
+
+
 export const assets = {
   screenshot5,
   Fireship,
@@ -19,4 +25,9 @@ export const assets = {
   ow,
   smgcat,
   copychan, Kokeno, msplayer
-}
+} as const
+
+
+export const demos = {
+  copychandemo, HMSdemo, Koneko
+} as const 

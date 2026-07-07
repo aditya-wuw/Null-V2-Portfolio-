@@ -2,6 +2,7 @@ import { Link, createFileRoute } from '@tanstack/react-router'
 import { motion } from 'motion/react'
 import { useEffect } from 'react'
 import { MdArrowBackIos } from 'react-icons/md'
+import { GrUpdate } from 'react-icons/gr'
 import { projectsData } from '@/data/data'
 import { createThemeContext } from '@/Context/context'
 
@@ -18,7 +19,7 @@ function RouteComponent() {
   }, [])
 
   return (
-    <div className='mt-20'>
+    <div className="mt-20">
       <Link to="/">
         <button
           className={`${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'} p-1 px-3 text-xl font-light rounded-xl mb-3 cursor-pointer`}
@@ -39,14 +40,39 @@ function RouteComponent() {
                 {item.title}
               </h1>
               <div className="h-55 max-[482px]:h-35 w-full overflow-hidden rounded-2xl relative">
-                <img
-                  src={item.image}
-                  width={2000}
-                  height={300}
-                  className="object-cover absolute 2xl:-top-45 xl:-top-15"
-                />
+                {item.image && (
+                  <img
+                    src={item.image}
+                    width={2000}
+                    height={1000}
+                    className="object-cover absolute 2xl:-top-45 xl:-top-15"
+                  />
+                )}
               </div>
+              {item.DemoVideo && (
+                <div>
+                  <video
+                    src={item.DemoVideo}
+                    width={1920}
+                    height={1080}
+                    className="rounded-md"
+                    autoPlay
+                    muted
+                  >
+                    your browser is not supported :(
+                  </video>
+                </div>
+              )}
               <p className="text-md max-lg:text-sm">{item.dedicated_dec}</p>
+              {item.Update && (
+                <div className="px-5">
+                  <h1 className="flex items-center gap-2 mb-2 text-xl font-bold">
+                    <GrUpdate />
+                    Update
+                  </h1>
+                  <p>{item.Update}</p>
+                </div>
+              )}
               <div className="flex gap-3 items-center justify-end mb-3">
                 {item.links.map(
                   (Linkitem, LinkIndex) =>

@@ -61,9 +61,11 @@ export interface ProjectItem {
     started?: string;
     ended?: string;
     status?: string;
+    DemoVideo?: string;
     contributors?: Array<Contributor>;
     description: string;
     additional_dec?: string | null;
+    Update?: string;
     dedicated_dec?: JSX.Element;
     image: string | null;
     tags: Array<string | JSX.Element>;
