@@ -18,7 +18,7 @@ import {
   SiZod,
 } from 'react-icons/si'
 import { PiFileSql } from 'react-icons/pi'
-import { GrGithub } from 'react-icons/gr'
+// import { GrGithub } from 'react-icons/gr'
 import { DiLinux, DiReact } from 'react-icons/di'
 // import { CgVercel } from 'react-icons/cg'
 import { IoLogoVercel } from 'react-icons/io5'

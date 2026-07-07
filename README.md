@@ -1,6 +1,6 @@
 # Null V2 Portfolio
 
-`live on : https://www.nullfaceddev.xyz`<br>(**\_0\_\_\_\_**0\_\_\_)<br>
+`live on : https://adi.smgcat.site/`<br>(**\_0\_\_\_\_**0\_\_\_)<br>
 Welcome to **Null V2 Portfolio**!
 This project is a modern and customizable portfolio template designed to showcase your work, skills, and contact information effectively.
 

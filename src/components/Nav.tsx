@@ -24,14 +24,14 @@ const Nav = () => {
     >
       <div className="flex justify-between items-center mx-2">
         <h1
-        className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
+          className={`md:text-xl text-md font-extrabold tracking-[2px] ${LightTheme ? 'text-blue-400' : 'text-white'}`}
         >
           <Link
             to="/"
             className={`${!InView && 'opacity-100 cursor-pointer'} opacity-0 cursor-default transition-opacity duration-600 ease-in-out`}
           >
-            <span className="font-light">
-              &lt;<span className="font-bold">N</span> /&gt;
+            <span className="font-extralight font-mono leading-relaxed">
+              &lt;<span>A</span>/&gt;
             </span>
           </Link>
         </h1>
