@@ -61,7 +61,7 @@ function layOuts() {
         <div
           id="smooth-content"
           className={`w-full min-h-screen overflow-visible ${
-            LightTheme ? 'bg-white Grind-white' : 'bg-black Grind-white'
+            LightTheme ? 'bg-white Grind-black' : 'bg-black Grind-white'
           }`}
         >
           <div className="flex flex-1 items-start justify-center mx-4 pt-px ">
