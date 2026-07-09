@@ -1,11 +1,11 @@
 # Null V2 Portfolio
-
-`live on : https://adi.smgcat.site/`<br>(**\_0\_\_\_\_**0\_\_\_)<br>
+Some core performance tweeking is beeing planned and tested will be implemented soon <br>
+`live on : https://adi.smgcat.site/`<br>( 0\_\_\_\_0 )<br>
+## Important : sub domain hasn't been configured but ultimately the domain will be updated to "adi" from "nullfaceddev"
 Welcome to **Null V2 Portfolio**!
 This project is a modern and customizable portfolio designed to showcase my work, skills, and contact information effectively.
 
 ## Features
-
 - Sleek and responsive design
 - Easy to edit content and personalize
 - Clean code structure for customization
