@@ -20,8 +20,6 @@ const Projects = React.memo(() => {
     const isTabletOrDesktop = window.innerWidth > 1024
     setislist(isTabletOrDesktop)
     setdisabled(!isTabletOrDesktop)
-    console.log(islist)
-    console.log(disabled)
     if (disabled) {
       setduration(1)
     }
@@ -45,7 +43,7 @@ const Projects = React.memo(() => {
       id="Projects"
       className={`select-none  ${LightTheme ? 'bg-linear-to-l from-neutral-500 text-black ' : 'bg-linear-to-r from-neutral-500 text-white'}`}
     >
-      <div className={`p-3 ${LightTheme ? 'bg-white' : 'bg-black text-white'}`}>
+      <div className={`p-2 ${LightTheme ? 'bg-white' : 'bg-black text-white'}`}>
         <div>
           <div className="flex justify-between w-full mx-1 px-2">
             <span>

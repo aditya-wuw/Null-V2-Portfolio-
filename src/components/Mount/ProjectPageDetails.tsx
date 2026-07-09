@@ -8,21 +8,21 @@ const ProjectPageDetails = ({
   HowItWorks,
 }: ProjectDetailsType) => {
   return (
-    <div>
-      <p>{Desc}</p>
-      <section className="mx-5">
-        <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
+    <div className="mx-5">
+      <section>
+        <span>{Desc}</span>
+        <span className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
           <PiProjectorScreenFill />
           Project Idea
-        </h1>
-        <p className="text-lg">{ProjectIdea}</p>
+        </span>
+        <div className="text-md">{ProjectIdea}</div>
       </section>
-      <section className="mx-5">
+      <section>
         <h1 className="text-2xl font-bold mt-5 mb-2 flex gap-2 items-center">
           <SiPaloaltonetworks />
           How It Works
         </h1>
-        <p className="text-lg">{HowItWorks}</p>
+        <div className="text-md">{HowItWorks}</div>
       </section>
     </div>
   )

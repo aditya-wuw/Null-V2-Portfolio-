@@ -33,11 +33,11 @@ function App() {
   }, [])
   const { LightTheme, setTheme } = createThemeContext()
   return (
-    <div id="About" className="relative">
+    <main id="About" className="relative">
       <div className={`flex flex-col gap-2 wrap-break-word`}>
         <section>
           <div
-            className={`xl:mt-15 mt-5 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
+            className={`xl:mt-17 mt-5 rounded-xl w-full max-sm:h-25 sm:h-35 max-h-50 overflow-hidden  relative select-none ${LightTheme ? 'bg-gray-400' : 'bg-black'}`}
           >
             <Suspense
               fallback={
@@ -52,7 +52,7 @@ function App() {
             </Suspense>
           </div>
         </section>
-        <section className="relative z-20 flex max-lg:flex-col gap-1 mt-3">
+        <section className="relative z-20 flex max-lg:flex-col gap-2 max-lg:gap-3 mt-4">
           <div className="lg:w-[70%]">
             <Header />
           </div>
@@ -119,6 +119,6 @@ function App() {
           </Suspense>
         </footer>
       </div>
-    </div>
+    </main>
   )
 }

@@ -20,7 +20,7 @@ function RouteComponent() {
   }, [])
 
   return (
-    <div className="mt-10">
+    <div className="md:mt-5">
       <Link to="/">
         <button
           className={`${!LightTheme ? 'bg-white text-black' : 'bg-black text-white'} p-1 px-3 text-xl font-light rounded-xl mb-3 cursor-pointer`}
@@ -68,13 +68,13 @@ function RouteComponent() {
                   </video>
                 </div>
               )}
-              <p className="text-md max-lg:text-sm">
+              <div className="text-md max-lg:text-sm">
                 <ProjectPageDetails
                   Desc={item.dedicated_dec.Desc}
                   ProjectIdea={item.dedicated_dec.ProjectIdea}
                   HowItWorks={item.dedicated_dec.HowItWorks}
                 />
-              </p>
+              </div>
               {item.Update && (
                 <div className="px-5">
                   <h1 className="flex items-center gap-2 mb-2 text-xl font-bold">

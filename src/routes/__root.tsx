@@ -25,13 +25,12 @@ function layOuts() {
   useGSAP(
     () => {
       if (loading) return
-
       const smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
-        smooth: 1.1,
+        smooth: 1.2,
         effects: true,
-        // normalizeScroll: true,
+        normalizeScroll: true,
       })
       ScrollTrigger.refresh()
       return () => {
@@ -50,7 +49,9 @@ function layOuts() {
   }
 
   return (
-    <div className={`${LightTheme ? 'bg-white' : 'bg-black'} inset-0 relative`}>
+    <div
+      className={`${LightTheme ? 'bg-white Grind-black' : 'bg-black Grind-white'} inset-0 relative`}
+    >
       <Nav />
       <div
         ref={ContainerRef}
@@ -59,8 +60,8 @@ function layOuts() {
       >
         <div
           id="smooth-content"
-          className={`w-full min-h-screen ${
-            LightTheme ? 'bg-white Grind-black' : 'bg-black Grind-white'
+          className={`w-full min-h-screen overflow-visible ${
+            LightTheme ? 'bg-white Grind-white' : 'bg-black Grind-white'
           }`}
         >
           <div className="flex flex-1 items-start justify-center mx-4 pt-px ">

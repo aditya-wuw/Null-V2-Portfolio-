@@ -31,6 +31,7 @@ export interface DetailsData {
     employment: string;
     certification: Array<CertificationItem>;
     techstack: JSX.Element;
+    college: string
 }
 
 export interface SkillItem {

@@ -45,15 +45,15 @@ export const heroData: HeroData = {
   role: 'aka @Adi',
   about_ln1: (
     <p>
-      <span className="font-bold">Full Stack Developer</span> based in{' '}
-      <strong>West Bengal, India</strong>. Specializing in Next.js, React,
-      TypeScript.
+      <span className="font-bold">Full Stack Developer</span> and a Final year
+      student based in <strong>West Bengal, India</strong>.
     </p>
   ),
   about_ln2: (
     <span>
-      I'm a self-taught developer usually creating apps or sites leveraging web
-      tech with simplicity in mind.
+      building functional web apps/websites with TypeScript, React, Next and
+      Supabase. Hosting using Vercel, Render and maintaining CI/CD using Vercel
+      CLI tools and Git with strict Type safety.
     </span>
   ),
   about_ln3:
@@ -77,6 +77,7 @@ export const details: DetailsData = {
       path: '/Web Development.pdf',
     },
   ],
+  college: 'Currently final year',
   techstack: (
     <span className="flex gap-2 items-center">
       <RiNextjsFill className="hover:scale-115 scale-100 cursor-pointer" />

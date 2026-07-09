@@ -72,7 +72,7 @@ const Details = React.memo(() => {
           <h1>Going to - College</h1>
           <div>
             <Suspense>
-              <Live status="Currently 3rd year" />
+              <Live status={details.college} />
             </Suspense>
           </div>
         </section>

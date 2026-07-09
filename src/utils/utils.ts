@@ -3,8 +3,9 @@ import { ScrollSmoother } from 'gsap/all'
 
 export const scrollToSection = (targetId: string) => {
   // 2. Safely trigger the smoother instance
+  const target = document.getElementById(targetId);
   const smoother = ScrollSmoother.get();
   if (smoother) {
-    smoother.scrollTo(`#${targetId}`, true, "top top");
+    smoother.scrollTo(target, true, "top top");
   }
 };
